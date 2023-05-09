@@ -136,7 +136,6 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
         ani.SetFloat("InputX", mouseX);
         ani.SetFloat("InputY", mouseY);
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfteiAnimation(mousePos, itemDetails);
         yield return new WaitForSeconds(0.55f);
         isUseTool = false;
 
@@ -151,7 +150,6 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
         ani.SetFloat("InputX", mouseX);
         ani.SetFloat("InputY", mouseY);
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfteiAnimation(mousePos, itemDetails);
         yield return new WaitForSeconds(0.55f);
         isUseTool = false;
 
@@ -166,7 +164,6 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
         ani.SetFloat("InputX", mouseX);
         ani.SetFloat("InputY", mouseY);
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfteiAnimation(mousePos, itemDetails);
         yield return new WaitForSeconds(0.55f);
         isUseTool = false;
 
@@ -181,7 +178,6 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
         ani.SetFloat("InputX", mouseX);
         ani.SetFloat("InputY", mouseY);
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfteiAnimation(mousePos, itemDetails);
         yield return new WaitForSeconds(0.55f);
         isUseTool = false;
 
@@ -196,7 +192,6 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
         ani.SetFloat("InputX", mouseX);
         ani.SetFloat("InputY", mouseY);
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfteiAnimation(mousePos, itemDetails);
         yield return new WaitForSeconds(0.55f);
         isUseTool = false;
 
@@ -211,7 +206,6 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
         ani.SetFloat("InputX", mouseX);
         ani.SetFloat("InputY", mouseY);
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfteiAnimation(mousePos, itemDetails);
         yield return new WaitForSeconds(0.55f);
         isUseTool = false;
 
@@ -238,18 +232,18 @@ public class OtherPlayer : MonoBehaviour, Isavealbe
             ani.SetFloat("InputY", inputY);
         }
     }
-
+    //TODO 随时准备撤离
     public SaveData SaveGame()
     {
         SaveData saveData = new SaveData();
         saveData.characterPos = new Dictionary<string, SerializableVector3>();
-        saveData.characterPos.Add(this.name, new SerializableVector3(transform.position));
+        saveData.characterPos.Add(playerId, new SerializableVector3(transform.position));
         return saveData;
     }
 
     public void LoadGame(SaveData saveData)
     {
-        var charaPos = saveData.characterPos[this.name].ToVertor3();
+        var charaPos = saveData.characterPos[playerId].ToVertor3();
         transform.position = charaPos;
     }
 }

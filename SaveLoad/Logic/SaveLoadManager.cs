@@ -8,8 +8,7 @@ namespace MyFarm.Save
     public class SaveLoadManager : Singleton<SaveLoadManager>
     {
         private List<Isavealbe> saveList = new List<Isavealbe>();
-        public List<DataSlot> dataSlots = new List<DataSlot>(new DataSlot[3]);
-
+        public Dictionary<string, SaveData> dataDic = new Dictionary<string, SaveData>();
         private string jsonFolder;
         private int curIndex;
         /// <summary>
@@ -19,6 +18,7 @@ namespace MyFarm.Save
         {
             base.Awake();
             jsonFolder = Application.persistentDataPath + "/SAVE DATA/";//创建存储路径 
+            curIndex=0;
             ReadSaveData();
         }
         /// <summary>
@@ -76,36 +76,29 @@ namespace MyFarm.Save
         {
             if (Directory.Exists(jsonFolder))
             {
-                for (int i = 0; i < dataSlots.Count; i++)
+                var resultPath = jsonFolder + "data" + curIndex + ".json";
+                if (File.Exists(resultPath))
                 {
-                    var resultPath = jsonFolder + "data" + i + ".json";
-                    if (File.Exists(resultPath))
-                    {
-                        var stringData = File.ReadAllText(resultPath);
-                        var jsonData = JsonConvert.DeserializeObject<DataSlot>(stringData);
-                        dataSlots[i] = jsonData;
-                    }
+                    var stringData = File.ReadAllText(resultPath);
+                    var jsonData = JsonConvert.DeserializeObject<Dictionary<string, SaveData>>(stringData);
+                    saveData = jsonData;
                 }
             }
         }
         //存档
-        private void Save(int index)
+        private void Save()
         {
             DataSlot data = new DataSlot();
             foreach (var save in saveList)
             {
                 //遍历所有接口的实例，把guid当做key，返回的savedate当value，所有的合一起就是一个存档字典
-                data.dataDic.Add(save.GUID, save.SaveGame());
+                dataDic.Add(save.GUID, save.SaveGame());
 
             }
-
-            dataSlots[index] = data;
-
-
-            var resultPath = jsonFolder + "data" + index + ".json";
+            var resultPath = jsonFolder + "data" + curIndex + ".json";
 
             // Debug.Log(dataSlots[index]);
-            var jsonData = JsonConvert.SerializeObject(dataSlots[index], Formatting.Indented);//序列化
+            var jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);//序列化
             if (!File.Exists(resultPath))
             {
                 //创建路径
@@ -115,15 +108,14 @@ namespace MyFarm.Save
             File.WriteAllText(resultPath, jsonData);
         }
         //读档
-        public void Load(int index)
+        public void Load()
         {
-            curIndex = index;
-            var resultPath = jsonFolder + "data" + index + ".json";
-            var sringData = File.ReadAllText(resultPath);//根据路径读出来
-            var jsonData = JsonConvert.DeserializeObject<DataSlot>(sringData);//读出来的东西反序列化成dataslot
+            var resultPath = jsonFolder + "data" + curIndex + ".json";
+            var stringData = File.ReadAllText(resultPath);//根据路径读出来
+            var jsonData = JsonConvert.DeserializeObject<Dictionary<string, SaveData>>(stringData);//读出来的东西反序列化成saveData
             foreach (var save in saveList)
             {
-                save.LoadGame(jsonData.dataDic[save.GUID]);
+                save.LoadGame(dataDic[save.GUID]);
             }
 
         }

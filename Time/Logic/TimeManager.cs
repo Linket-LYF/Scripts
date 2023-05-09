@@ -33,6 +33,8 @@ public class TimeManager : Singleton<TimeManager>, Isavealbe
         EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         EventHandler.StartNewGame += OnStartNewGame;
         EventHandler.EndGameEvent += OnEndGameEvent;
+        EventHandler.OtherPlayerJoin += OnOtherPlayerJoin;
+        EventHandler.OtherPlayerJoinFinish += OnOtherPlayerJoinFinish;
     }
 
     private void OnEndGameEvent()
@@ -60,7 +62,18 @@ public class TimeManager : Singleton<TimeManager>, Isavealbe
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         EventHandler.StartNewGame -= OnStartNewGame;
         EventHandler.EndGameEvent -= OnEndGameEvent;
+        EventHandler.OtherPlayerJoin -= OnOtherPlayerJoin;
+        EventHandler.OtherPlayerJoinFinish -= OnOtherPlayerJoinFinish;
 
+    }
+    private void OnOtherPlayerJoin(int obj)
+    {
+        gameClockPause = false;
+    }
+
+    private void OnOtherPlayerJoinFinish()
+    {
+        gameClockPause = true;
     }
 
     private void OnBeforeSceneUnloadEvent()

@@ -317,6 +317,7 @@ public class Player : MonoBehaviour, Isavealbe
     private void Movement()
     {
         rb.MovePosition(rb.position + movementInput * speed * Time.deltaTime);
+        Client.Instance.SendToClient(MsgTypes.Move, new PlayerMoveMsgC2S(transform.position));
 
     }
     //动画切换
@@ -330,19 +331,20 @@ public class Player : MonoBehaviour, Isavealbe
             ani.SetFloat("InputX", inputX);
             ani.SetFloat("InputY", inputY);
         }
+        Client.Instance.SendToClient(MsgTypes.SwitchAnim, new PlayerAnimationMsgC2S(isMoving, inputX, inputY, mouseX, mouseY));
     }
 
     public SaveData SaveGame()
     {
         SaveData saveData = new SaveData();
         saveData.characterPos = new Dictionary<string, SerializableVector3>();
-        saveData.characterPos.Add(this.name, new SerializableVector3(transform.position));
+        saveData.characterPos.Add(playerId, new SerializableVector3(transform.position));
         return saveData;
     }
 
     public void LoadGame(SaveData saveData)
     {
-        var charaPos = saveData.characterPos[this.name].ToVertor3();
+        var charaPos = saveData.characterPos[playerId].ToVertor3();
         transform.position = charaPos;
     }
 }

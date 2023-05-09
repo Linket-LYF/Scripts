@@ -9,7 +9,6 @@ public class CropDetails
     [Header("不同阶段生长时间")]
     public int[] growthDay;
     public int TotalGrowthDays
-
     {
         get
         {

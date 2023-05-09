@@ -174,4 +174,22 @@ public static class EventHandler
     {
         EndGameEvent?.Invoke();
     }
+    //其他玩家加入
+    public static event Action<int> OtherPlayerJoin;
+    public static void CallOtherPlayerJoin(int name)
+    {
+        OtherPlayerJoin?.Invoke(name);
+    }
+    //其他玩家加入完毕
+    public static event Action OtherPlayerJoinFinish;
+    public static void CallOtherPlayerJoinFinish()
+    {
+        OtherPlayerJoinFinish?.Invoke();
+    }
+    //其他玩家离开
+    public static event Action<string> OtherPlayerLeave;
+    public static void CallOtherPlayerLeave(string name)
+    {
+        OtherPlayerLeave?.Invoke(name);
+    }
 }
