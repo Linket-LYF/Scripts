@@ -77,7 +77,6 @@ namespace MyFarm.Save
         //存档
         private void Save()
         {
-            DataSlot data = new DataSlot();
             foreach (var save in saveList)
             {
                 //遍历所有接口的实例，把guid当做key，返回的savedate当value，所有的合一起就是一个存档字典

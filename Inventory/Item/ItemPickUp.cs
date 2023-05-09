@@ -18,7 +18,7 @@ namespace MyFarm.Inventory
                 if (item.itemDetails.canPickUp)
                 {
                     //拾取物品
-                    InventoryManager.instance.AddItem(item, true);
+                    InventoryManager.Instance.AddItem(item, true);
                     EventHandler.CallGetSoundDeatil(soundName.PickUp);
                 }
             }
