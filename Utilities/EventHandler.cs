@@ -163,10 +163,10 @@ public static class EventHandler
         GetSoundDeatil?.Invoke(soundName);
     }
     //开始新游戏
-    public static event Action<int> StartNewGame;
-    public static void CallStartNewGame(int index)
+    public static event Action StartNewGame;
+    public static void CallStartNewGame()
     {
-        StartNewGame?.Invoke(index);
+        StartNewGame?.Invoke();
     }
     //结束游戏
     public static event Action EndGameEvent;
@@ -174,9 +174,9 @@ public static class EventHandler
     {
         EndGameEvent?.Invoke();
     }
-        //其他玩家加入
-    public static event Action<int> OtherPlayerJoin;
-    public static void CallOtherPlayerJoin(int name)
+    //其他玩家加入
+    public static event Action<string> OtherPlayerJoin;
+    public static void CallOtherPlayerJoin(string name)
     {
         OtherPlayerJoin?.Invoke(name);
     }

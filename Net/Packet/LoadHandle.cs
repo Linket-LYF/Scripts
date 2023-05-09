@@ -11,4 +11,8 @@ public class LoadHandle
     {
 
     }
+    public void Save(byte[] data)
+    {
+
+    }
 }

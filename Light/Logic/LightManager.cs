@@ -16,7 +16,7 @@ public class LightManager : MonoBehaviour
         EventHandler.StartNewGame += OnStartNewGame;
     }
 
-    private void OnStartNewGame(int obj)
+    private void OnStartNewGame()
     {
         currentShift = LightShift.Morning;
     }

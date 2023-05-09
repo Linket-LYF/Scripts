@@ -122,7 +122,7 @@ namespace MyFarm.Inventory
                 //自身背包范围内
                 if (slotType == SlotType.Bag && targetSlot.slotType == SlotType.Bag)
                 {
-                    InventoryManager.instance.SwapItem(slotIndex, targetIndex);
+                    InventoryManager.Instance.SwapItem(slotIndex, targetIndex);
                 }
                 else if (slotType == SlotType.Shop && targetSlot.slotType == SlotType.Bag)//buy
                 {

@@ -9,6 +9,7 @@ namespace MyFarm.Transition
     {
         [SceneName]
         public string startSceneName = string.Empty;
+        public static string currentSceneName = "";
         private CanvasGroup fadeCanvasGroup;
 
         private bool isFade;
@@ -44,7 +45,7 @@ namespace MyFarm.Transition
             StartCoroutine(UnloadScene());
         }
 
-        private void OnStartNewGame(int obj)
+        private void OnStartNewGame()
         {
             StartCoroutine(LoadSaveDataScene(startSceneName));
         }
@@ -110,9 +111,11 @@ namespace MyFarm.Transition
                 yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             }
             yield return LoadSceneSetActive(sceneName);
+            currentSceneName = sceneName;
             EventHandler.CallAfterLoadSceneEvent();
             yield return Fade(0f);
             //将新的存档发送给服务器
+            SaveLoadManager.Instance.Save();
         }
         private IEnumerator UnloadScene()
         {

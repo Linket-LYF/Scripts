@@ -57,7 +57,7 @@ public class Player : MonoBehaviour, Isavealbe
         inputDisable = true;
     }
 
-    private void OnStartNewGame(int index)
+    private void OnStartNewGame()
     {
         inputDisable = false;
         transform.position = Settings.playerStartPos;

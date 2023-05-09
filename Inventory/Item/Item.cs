@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MyFarm.CropPlant;
-using MyFarm.Net;
 namespace MyFarm.Inventory
 {
     public class Item : MonoBehaviour
@@ -33,7 +32,7 @@ namespace MyFarm.Inventory
         public void InitItem(int ID)
         {
             itemID = ID;
-            itemDetails = InventoryManager.instance.GetItemDetails(itemID);
+            itemDetails = InventoryManager.Instance.GetItemDetails(itemID);
             if (itemDetails != null)
             {
                 spriteRenderer.sprite = itemDetails.itemOnWorldSprite != null ? itemDetails.itemOnWorldSprite : itemDetails.itemIcon;

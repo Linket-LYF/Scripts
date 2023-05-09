@@ -2,16 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
-
+using MyFarm.Transition;
 namespace MyFarm.Save
 {
     public class SaveLoadManager : Singleton<SaveLoadManager>
     {
-        private List<Isavealbe> saveList = new List<Isavealbe>();
-        public Dictionary<string, SaveData> dataDic = new Dictionary<string, SaveData>();
+        private List<Isavealbe> saveList = new();
+        public Dictionary<string, SaveData> dataDic = new();
 
         private string jsonFolder;
-        private int curIndex;
         /// <summary>
         /// Awake is called when the script instance is being loaded.
         /// </summary>
@@ -19,7 +18,6 @@ namespace MyFarm.Save
         {
             base.Awake();
             jsonFolder = Application.persistentDataPath + "/SAVE DATA/";//创建存储路径 
-            curIndex=0;
             ReadSaveData();
         }
         /// <summary>
@@ -32,13 +30,11 @@ namespace MyFarm.Save
         }
         private void OnEndGameEvent()
         {
-            Save(curIndex);
+            Save();
         }
 
-        private void OnStartNewGame(int obj)
+        private void OnStartNewGame()
         {
-            curIndex = obj;
-            Debug.Log("curIndex" + curIndex);
             //Debug.Log("curindex" + curIndex);
         }
 
@@ -65,17 +61,17 @@ namespace MyFarm.Save
         {
             if (Directory.Exists(jsonFolder))
             {
-                var resultPath = jsonFolder + "data" + curIndex + ".json";
+                var resultPath = jsonFolder + "data" + GameManager.Instance.Player.playerId + ".json";
                 if (File.Exists(resultPath))
                 {
                     var stringData = File.ReadAllText(resultPath);
                     var jsonData = JsonConvert.DeserializeObject<Dictionary<string, SaveData>>(stringData);
-                    saveData = jsonData;
+                    dataDic = jsonData;
                 }
             }
         }
         //存档
-        private void Save()
+        public void Save()
         {
             foreach (var save in saveList)
             {
@@ -83,10 +79,10 @@ namespace MyFarm.Save
                 dataDic.Add(save.GUID, save.SaveGame());
 
             }
-            var resultPath = jsonFolder + "data" + curIndex + ".json";
+            var resultPath = jsonFolder + "data" + GameManager.Instance.Player.playerId + ".json";
 
             // Debug.Log(dataSlots[index]);
-            var jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);//序列化
+            var jsonData = JsonConvert.SerializeObject(dataDic, Formatting.Indented);//序列化
             if (!File.Exists(resultPath))
             {
                 //创建路径
@@ -95,12 +91,18 @@ namespace MyFarm.Save
             //写入存档数据    
             File.WriteAllText(resultPath, jsonData);
             //将存档发送给服务器
-            //NetManager.Instance.SendMsg(OpCode.Account, AccountCode.SaveRequest, data);
+            GameSaveDataMsg gameSaveDataMsg = new GameSaveDataMsg();
+            foreach (var item in dataDic)
+            {
+                gameSaveDataMsg.GamesaveGame.Add(item.Key, SaveData2SaveMsg(item.Value));
+            }
+
+            ProtoHelper.ToBytes(gameSaveDataMsg);
         }
         //读档
         public void Load()
         {
-            var resultPath = jsonFolder + "data" + curIndex + ".json";
+            var resultPath = jsonFolder + "data" + GameManager.Instance.Player.playerId + ".json";
             var stringData = File.ReadAllText(resultPath);//根据路径读出来
             var jsonData = JsonConvert.DeserializeObject<Dictionary<string, SaveData>>(stringData);//读出来的东西反序列化成saveData
             foreach (var save in saveList)
@@ -110,6 +112,18 @@ namespace MyFarm.Save
 
             //向服务器发送读档请求
             //NetManager.Instance.SendMsg(OpCode.Account, AccountCode.LoadRequest, index);
+        }
+
+        public SaveGameC2SMsg SaveData2SaveMsg(SaveData saveData)
+        {
+            var saveDataMsg = new SaveGameC2SMsg();
+            saveDataMsg.DataSceneName = saveData.dataSceneName;
+            foreach (var item in saveData.characterPos)
+            {
+                saveDataMsg.CharacterPos.Add(item.Key, new Vector3Msg { X = item.Value.x, Y = item.Value.y, Z = item.Value.z });
+            }
+
+            return null;
         }
     }
 }

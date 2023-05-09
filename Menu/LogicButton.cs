@@ -15,8 +15,8 @@ public class LogicButton : MonoBehaviour
             text = inputfield.text
         };
         //EventHandler.CallStartNewGame(1);
-        SaveLoadManager.Instance.Load(1);
-        //Client.Instance.SendToClient(MsgTypes.Login, JsonHelper.ToJson(loginMsgC2S));
+        
+        Client.Instance.SendToClient(MsgTypes.Login, JsonHelper.ToJson(loginMsgC2S));
     }
 }
 

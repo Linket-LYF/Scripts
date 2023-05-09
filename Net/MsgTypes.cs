@@ -30,8 +30,8 @@ internal class MsgTypes
         {UIOpen, UIHandle.Instance.OpenUI},
         {UIClose, UIHandle.Instance.CloseUI},
         {Login, LoginHandle.Instance.Login},
-        {PlayerJoin, PlayerHandle.Instance.PlayerJoin},
-        {PlayerLeave, PlayerHandle.Instance.PlayerLeave},
+        // {PlayerJoin, PlayerHandle.Instance.PlayerJoin},
+        // {PlayerLeave, PlayerHandle.Instance.PlayerLeave},
         {UseItem, ItemHandle.Instance.UseItem},
         {PickItem, ItemHandle.Instance.PickItem},
         {DropItem, ItemHandle.Instance.DropItem},
@@ -45,8 +45,8 @@ internal class MsgTypes
         {UIOpen, UIHandle.Instance.OpenUI},
         {UIClose, UIHandle.Instance.CloseUI},
         {Login, LoginHandle.Instance.Login},
-        {PlayerJoin, PlayerHandle.Instance.PlayerJoin},
-        {PlayerLeave, PlayerHandle.Instance.PlayerLeave},
+        // {PlayerJoin, PlayerHandle.Instance.PlayerJoin},
+        // {PlayerLeave, PlayerHandle.Instance.PlayerLeave},
         {UseItem, ItemHandle.Instance.UseItem},
         {PickItem, ItemHandle.Instance.PickItem},
     };
@@ -60,30 +60,4 @@ public class LoginMsgS2C
 {
     public string account;
     public int result;//0成功 1失败
-}
-public class PlayerMoveMsgC2S
-{
-    public int x;
-    public int y;
-}
-public class PlayerMoveMsgS2C
-{
-    public int x;
-    public int y;
-}
-public class PlayerAnimationMsgC2S
-{
-    public bool isMoving;
-    public float inputX;
-    public float inputY;
-    public float mouseX;
-    public float mouseY;
-}
-public class PlayerAnimationMsgS2C
-{
-    public bool isMoving;
-    public float inputX;
-    public float inputY;
-    public float mouseX;
-    public float mouseY;
 }

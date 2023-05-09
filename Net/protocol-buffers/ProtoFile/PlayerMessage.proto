@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+
+
+//import "LanguageMessage.proto";
+
+message Vector3Msg{
+	float x=1;
+	float y=2;
+	float z=3;
+}
+message SceneItemMsg{
+	int32 clientID=1;
+	int32 itemID=2;
+	Vector3Msg pos=3;
+}
+message ScenenFurnitureMsg{
+	int32 clientID=1;
+	int32 furnitureID=2;
+	Vector3Msg pos=3;
+	int32 boxID=4;
+}
+message TileDetailsMsg{
+	int32 gridX=1;
+	int32 gridY=2;
+	bool canDig=3;
+	bool canDrop=4;
+	bool canPlaceFurniture=5;
+	bool isNPCObstacle=6;
+	int32 daySinceDig=7;
+	int32 daySinceWater=8;
+	int32 seedItemID=9;
+	int32 growthDays=10;
+	int32 daysSinceLastHarvest=11;
+}
+
+message InventoryItemMsg{
+	int32 itemID=1;
+	int32 count=2;
+}
+message LoginC2SMsg{
+	string account=1;
+}
+
+message LoginS2CMsg{
+	string account=1;
+	int32 result=2;
+}
+message ListSceneItemMsg{
+	repeated SceneItemMsg sceneItems=1;
+}
+message ListSceneFurnitureMsg{
+	repeated ScenenFurnitureMsg sceneFurnitures=1;
+}
+message ListInventoryItemMsg{
+	repeated InventoryItemMsg inventoryItems=1;
+}
+message SaveGameC2SMsg{
+	string dataSceneName=1;
+	map<string,Vector3Msg> characterPos=2;
+	map<string,ListSceneItemMsg> sceneItems=3;
+	map<string,ListSceneFurnitureMsg> sceneFurnitures=4;
+	map<string,TileDetailsMsg> tileDetails=5;
+	map<string,bool> fristLogin=6;
+	map<string,ListInventoryItemMsg> inventoryItems=7;
+	map<string,int64> tiemDic=8;
+	int64 money=9;
+	int32 animState=10;
+	
+}
+message GameSaveDataMsg{
+	map<string,SaveGameC2SMsg> gamesaveGame=1;
+}
+message SaveGameS2CMsg{
+	string account=1;
+	int32 result=2;
+}
+message LoadGameC2SMsg{
+	string account=1;
+}
+
+
+
+

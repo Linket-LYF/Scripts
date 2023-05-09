@@ -41,7 +41,7 @@ namespace MyFarm.Map
             foreach (var mapData in mapDataList)
             {
                 fristLoadDic.Add(mapData.sceneName, true);
-                Init(mapData);
+                InitTileDetailsDic(mapData);
             }
             Isavealbe save = this;
             save.RegisterSaveble();

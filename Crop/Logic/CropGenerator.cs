@@ -37,7 +37,7 @@ namespace MyFarm.CropPlant
             Vector3Int cropgridPos = currentGrid.WorldToCell(transform.position);
             if (seedItemID != 0)
             {
-                TileDetails tileDetails = GridMapManager.instance.GetMapTileDetailsOnMousePosition(cropgridPos);
+                TileDetails tileDetails = GridMapManager.Instance.GetMapTileDetailsOnMousePosition(cropgridPos);
                 if (tileDetails == null)
                 {
                     tileDetails = new TileDetails();

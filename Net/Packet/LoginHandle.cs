@@ -17,7 +17,7 @@ public class LoginHandle
         {
             GameManager.Instance.Player.playerId = response.account;
             //开始游戏
-            SaveLoadManager.Instance.Load(0);
+            EventHandler.CallStartNewGame();
             MenuManager.Instance.ShowTips("登录成功");
         }
         else

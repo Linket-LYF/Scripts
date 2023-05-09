@@ -32,7 +32,7 @@ namespace MyFarm.Inventory
             EventHandler.StartNewGame += OnStartNewGame;
         }
 
-        private void OnStartNewGame(int obj)
+        private void OnStartNewGame()
         {
             sceneItemDic.Clear();
             sceneFurnitureDic.Clear();
@@ -158,6 +158,7 @@ namespace MyFarm.Inventory
                     sceneFurniture.position = new SerializableVector3(furniture.transform.position);
                     sceneFurniture.clientID = furniture.clientID;
                 };
+                GameManager.Instance.sceneFurnitures.Add(sceneFurniture);
                 if (furniture.GetComponent<EmptyBox>())
                     sceneFurniture.boxID = furniture.GetComponent<EmptyBox>().boxID;
                 sceneFurnitures.Add(sceneFurniture);

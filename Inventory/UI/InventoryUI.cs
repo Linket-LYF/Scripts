@@ -124,7 +124,7 @@ namespace MyFarm.Inventory
                     {
                         if (list[i].itemAmount > 0)
                         {
-                            var item = InventoryManager.instance.GetItemDetails(list[i].itemID);
+                            var item = InventoryManager.Instance.GetItemDetails(list[i].itemID);
                             playerSlots[i].UpdateSlot(item, list[i].itemAmount);
 
                         }
@@ -139,7 +139,7 @@ namespace MyFarm.Inventory
                     {
                         if (list[i].itemAmount > 0)
                         {
-                            var item = InventoryManager.instance.GetItemDetails(list[i].itemID);
+                            var item = InventoryManager.Instance.GetItemDetails(list[i].itemID);
                             bagBasicSlots[i].UpdateSlot(item, list[i].itemAmount);
 
                         }

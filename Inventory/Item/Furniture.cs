@@ -9,6 +9,5 @@ public class Furniture : MonoBehaviour
     private void Awake()
     {
         clientID = NetClientID.Instance.GetClientID();
-        GameManager.Instance.sceneFurnitures.Add(this);
     }
 }

@@ -24,7 +24,7 @@ public class NPCManager : Singleton<NPCManager>
         EventHandler.StartNewGame += OnStartNewGame;
     }
 
-    private void OnStartNewGame(int obj)
+    private void OnStartNewGame()
     {
         foreach (var chara in NPCPosition)
         {

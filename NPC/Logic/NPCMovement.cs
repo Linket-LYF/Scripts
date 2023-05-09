@@ -89,7 +89,7 @@ public class NPCMovement : MonoBehaviour, Isavealbe
         EventHandler.StartNewGame += OnStartNewGame;
     }
 
-    private void OnStartNewGame(int obj)
+    private void OnStartNewGame()
     {
         isInit = false;
         isFristLoad = true;

@@ -35,7 +35,7 @@ namespace MyFarm.Inventory
             EventHandler.StartNewGame += OnStartNewGame;
         }
 
-        private void OnStartNewGame(int obj)
+        private void OnStartNewGame()
         {
             playerBag = Instantiate(playerBagTemp);
             playerMoney = 100;
@@ -105,11 +105,11 @@ namespace MyFarm.Inventory
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);
         }
         //服务器拾取物品
-        public void PickUpItem(int clientID,bool isDestory)
+        public void PickUpItem(int clientID, bool isDestory)
         {
             var item = GameManager.Instance.GetItem(clientID);
             var index = GetItemIndexInBag(item.itemID);
-            AddItemIndex(itemID, index, amount);
+            AddItemIndex(item.itemID, index, 1);
             if (isDestory)
             {
                 GameManager.Instance.RemoveItem(clientID);
