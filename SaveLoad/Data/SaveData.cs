@@ -13,7 +13,7 @@ namespace MyFarm.Save
         public Dictionary<string, List<SceneItem>> sceneItemDic;//物品信息
         public Dictionary<string, List<SceneFurniture>> sceneFurnitureDic;//家具
         public Dictionary<string, TileDetails> tileDetailsDic;//瓦片地图
-        public Dictionary<string, bool> fristLoadDic;//场景是否第一次生成
+        public Dictionary<string, bool> fristLoadDic;//场景是否第一次生成   
         public Dictionary<string, List<InventoryItem>> inventoryDic;//背包
         public Dictionary<string, int> timeDic;//时间
         public int playerMoney;//金钱
