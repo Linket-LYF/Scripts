@@ -18,6 +18,8 @@ internal class MsgTypes
     public const int PickItem = 1011;
     public const int DropItem = 1012;
 
+    public const int SaveRequest = 1501;
+    public const int LoadRequest = 1502;
 
     public static Dictionary<int, Action<byte[]>> msgC2SHandles = new Dictionary<int, Action<byte[]>>
     {

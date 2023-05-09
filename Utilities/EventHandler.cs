@@ -174,7 +174,7 @@ public static class EventHandler
     {
         EndGameEvent?.Invoke();
     }
-    //其他玩家加入
+        //其他玩家加入
     public static event Action<int> OtherPlayerJoin;
     public static void CallOtherPlayerJoin(int name)
     {

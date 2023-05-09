@@ -32,11 +32,6 @@ public class SaveButton : MonoBehaviour
             text.text = curData.DataTime;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void LoadGame()
     {
         if (curData != null)

@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Text;
 using Newtonsoft.Json;
+using MyFarm.Save;
 public class LoginHandle
 {
     //单例模式
@@ -16,7 +17,7 @@ public class LoginHandle
         {
             GameManager.Instance.Player.playerId = response.account;
             //开始游戏
-            SaveLoadManager.Instance.Load();
+            SaveLoadManager.Instance.Load(0);
             MenuManager.Instance.ShowTips("登录成功");
         }
         else

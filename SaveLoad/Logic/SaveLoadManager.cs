@@ -9,6 +9,7 @@ namespace MyFarm.Save
     {
         private List<Isavealbe> saveList = new List<Isavealbe>();
         public Dictionary<string, SaveData> dataDic = new Dictionary<string, SaveData>();
+
         private string jsonFolder;
         private int curIndex;
         /// <summary>
@@ -28,18 +29,6 @@ namespace MyFarm.Save
         {
             EventHandler.StartNewGame += OnStartNewGame;
             EventHandler.EndGameEvent += OnEndGameEvent;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                Save(curIndex);
-            }
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                Load(curIndex);
-            }
         }
         private void OnEndGameEvent()
         {
@@ -106,6 +95,8 @@ namespace MyFarm.Save
             }
             //写入存档数据    
             File.WriteAllText(resultPath, jsonData);
+            //将存档发送给服务器
+            //NetManager.Instance.SendMsg(OpCode.Account, AccountCode.SaveRequest, data);
         }
         //读档
         public void Load()
@@ -118,6 +109,8 @@ namespace MyFarm.Save
                 save.LoadGame(dataDic[save.GUID]);
             }
 
+            //向服务器发送读档请求
+            //NetManager.Instance.SendMsg(OpCode.Account, AccountCode.LoadRequest, index);
         }
     }
 }

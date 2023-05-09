@@ -61,7 +61,7 @@ public class TimeManager : Singleton<TimeManager>, Isavealbe
         EventHandler.AfterLoadSceneEvent -= OnAfterLoadSceneEvent;
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         EventHandler.StartNewGame -= OnStartNewGame;
-        EventHandler.EndGameEvent -= OnEndGameEvent;
+        EventHandler.EndGameEvent -= OnEndGameEvent;       
         EventHandler.OtherPlayerJoin -= OnOtherPlayerJoin;
         EventHandler.OtherPlayerJoinFinish -= OnOtherPlayerJoinFinish;
 

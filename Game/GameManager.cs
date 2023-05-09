@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     Player player;
+    OtherPlayer[] ohterPlayers;
     Dictionary<int,OtherPlayer> otherPlayers = new Dictionary<int, OtherPlayer>();
 
     public Dictionary<string,bool> playerReady = new Dictionary<string, bool>();
@@ -14,7 +15,7 @@ public class GameManager : Singleton<GameManager>
         get => player;
         set => player = value;
     }
-
+    
     public Dictionary<string, OtherPlayer> OtherPlayers
     {
         get => otherPlayers;

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyFarm.Save;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour, Isavealbe
 {
-    public string playerId = "";
+    public string playerId = "测试用户";
     private Rigidbody2D rb;
     public float speed;
     public float inputX;
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour, Isavealbe
     private float mouseX;
     private float mouseY;
     private bool isUseTool;
-    public Text playerIdtext;
+    public TextMeshProUGUI playerIdtext;
 
     public string GUID => GetComponent<DataGUID>().guid.ToString();
 
@@ -37,7 +38,6 @@ public class Player : MonoBehaviour, Isavealbe
     private void Start()
     {
         GameManager.Instance.Player = this;
-        playerIdtext.text = playerId;
         Isavealbe saveable = this;
         saveable.RegisterSaveble();
     }
@@ -61,6 +61,7 @@ public class Player : MonoBehaviour, Isavealbe
     {
         inputDisable = false;
         transform.position = Settings.playerStartPos;
+        playerIdtext.text = playerId;
     }
 
     private void Update()
@@ -317,7 +318,6 @@ public class Player : MonoBehaviour, Isavealbe
     private void Movement()
     {
         rb.MovePosition(rb.position + movementInput * speed * Time.deltaTime);
-        Client.Instance.SendToClient(MsgTypes.Move, new PlayerMoveMsgC2S(transform.position));
 
     }
     //动画切换
@@ -331,20 +331,22 @@ public class Player : MonoBehaviour, Isavealbe
             ani.SetFloat("InputX", inputX);
             ani.SetFloat("InputY", inputY);
         }
-        Client.Instance.SendToClient(MsgTypes.SwitchAnim, new PlayerAnimationMsgC2S(isMoving, inputX, inputY, mouseX, mouseY));
     }
 
     public SaveData SaveGame()
     {
         SaveData saveData = new SaveData();
         saveData.characterPos = new Dictionary<string, SerializableVector3>();
-        saveData.characterPos.Add(playerId, new SerializableVector3(transform.position));
+        saveData.characterPos.Add(this.name, new SerializableVector3(transform.position));
         return saveData;
     }
 
     public void LoadGame(SaveData saveData)
     {
-        var charaPos = saveData.characterPos[playerId].ToVertor3();
+        var charaPos = saveData.characterPos[this.name].ToVertor3();
+        Debug.Log(playerId);
+        Debug.Log(playerIdtext.text);
+        playerIdtext.text = playerId;
         transform.position = charaPos;
     }
 }

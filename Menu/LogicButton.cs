@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MyFarm.Save;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +10,13 @@ public class LogicButton : MonoBehaviour
 
     public void SendLogicMsg()
     {
-        print(inputfield.text);
         var loginMsgC2S = new LoginMsgC2S
         {
             text = inputfield.text
         };
-        Client.Instance.SendToClient(MsgTypes.Login, JsonHelper.ToJson(loginMsgC2S));
+        //EventHandler.CallStartNewGame(1);
+        SaveLoadManager.Instance.Load(1);
+        //Client.Instance.SendToClient(MsgTypes.Login, JsonHelper.ToJson(loginMsgC2S));
     }
 }
 
