@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MyFarm.CropPlant;
-
+using MyFarm.Net;
 namespace MyFarm.Inventory
 {
     public class Item : MonoBehaviour
@@ -11,6 +11,7 @@ namespace MyFarm.Inventory
         private SpriteRenderer spriteRenderer;
         public ItemDetails itemDetails;
         private BoxCollider2D coll;
+        public int clientID;
 
 
         private void Awake()
@@ -24,6 +25,8 @@ namespace MyFarm.Inventory
             if (itemID != 0)
             {
                 InitItem(itemID);
+                clientID = NetClientID.Instance.GetClientID();
+                GameManager.Instance.sceneItems.Add(this);
             }
         }
         //初始化物品

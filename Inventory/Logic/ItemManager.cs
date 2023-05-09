@@ -156,6 +156,7 @@ namespace MyFarm.Inventory
                 {
                     sceneFurniture.itemID = furniture.furnitureID;
                     sceneFurniture.position = new SerializableVector3(furniture.transform.position);
+                    sceneFurniture.clientID = furniture.clientID;
                 };
                 if (furniture.GetComponent<EmptyBox>())
                     sceneFurniture.boxID = furniture.GetComponent<EmptyBox>().boxID;

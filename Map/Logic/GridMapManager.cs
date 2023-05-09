@@ -156,13 +156,9 @@ namespace MyFarm.Map
                         EventHandler.CallGetSoundDeatil(soundName.Water);
                         break;
                     case ItemType.Seed:
-
                         EventHandler.CallPlantSeedEvent(itemDetails.itemID, currentTile);
-                        Debug.Log("1");
                         EventHandler.CallDropItemEvent(itemDetails.itemID, mousePos, itemDetails.itemType);
-                        Debug.Log("2");
                         EventHandler.CallGetSoundDeatil(soundName.Plant);
-                        Debug.Log("3");
                         break;
                     case ItemType.BreakTool:
                     case ItemType.ChopTool:

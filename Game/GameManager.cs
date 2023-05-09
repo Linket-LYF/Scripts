@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MyFarm.Inventory;
 public class GameManager : Singleton<GameManager>
 {
     Player player;
@@ -9,6 +9,8 @@ public class GameManager : Singleton<GameManager>
     Dictionary<int,OtherPlayer> otherPlayers = new Dictionary<int, OtherPlayer>();
 
     public Dictionary<string,bool> playerReady = new Dictionary<string, bool>();
+    public List<Item> sceneItems = new List<Item>();
+    public List<SceneFurniture> sceneFurnitures = new List<SceneFurniture>();
 
     public Player Player
     {
@@ -48,5 +50,24 @@ public class GameManager : Singleton<GameManager>
     {
         otherPlayers[id].Destroy();
         otherPlayers.Remove(id);
+    }
+    public Item GetItem(string clientID)
+    {
+        foreach (var item in sceneItems)
+        {
+            if (item.clientID == clientID)
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+    public void RemoveItem(string clientID)
+    {
+        Item item = GetItem(clientID);
+        if (item != null)
+        {
+            sceneItems.Remove(item);
+        }
     }
 }

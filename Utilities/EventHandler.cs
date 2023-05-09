@@ -57,7 +57,7 @@ public static class EventHandler
     }
     //场景卸载之前的事件
     public static event Action BeforeSceneUnloadEvent;
-    public static void CallBeforeSceneUnloadEven()
+    public static void CallBeforeSceneUnloadEvent()
     {
         BeforeSceneUnloadEvent?.Invoke();
     }

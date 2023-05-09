@@ -51,6 +51,7 @@ public class SceneItem
 {
     public int itemID;
     public SerializableVector3 position;
+    public int clientID;
 }
 //场景建造信息
 [System.Serializable]
@@ -59,6 +60,7 @@ public class SceneFurniture
     public int itemID;
     public SerializableVector3 position;
     public int boxID;
+    public int clientID;
 }
 //网格
 [System.Serializable]

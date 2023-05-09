@@ -104,6 +104,20 @@ namespace MyFarm.Inventory
             //更新UI
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);
         }
+        //服务器拾取物品
+        public void PickUpItem(int clientID,bool isDestory)
+        {
+            var item = GameManager.Instance.GetItem(clientID);
+            var index = GetItemIndexInBag(item.itemID);
+            AddItemIndex(itemID, index, amount);
+            if (isDestory)
+            {
+                GameManager.Instance.RemoveItem(clientID);
+                Destroy(item.gameObject);
+            }
+            //更新UI
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);
+        }
         //背包是否有空位
         private bool CheckBagCapacity()
         {
@@ -223,6 +237,7 @@ namespace MyFarm.Inventory
                 playerBag.itemBagList[index] = item;
             }
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);
+            //将背包数据上传给服务器
         }
         //交易物品
         public void TradeItem(ItemDetails itemDetails, int amount, bool isTrade)

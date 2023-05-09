@@ -75,7 +75,7 @@ namespace MyFarm.Transition
         private IEnumerator Transition(string sceneName, Vector3 targetPositon)
         {
             //Debug.Log($"当前场景{SceneManager.GetActiveScene().name},要去的场景{sceneName}");
-            EventHandler.CallBeforeSceneUnloadEven();
+            EventHandler.CallBeforeSceneUnloadEvent();
             yield return Fade(1);
             yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
 
@@ -102,19 +102,21 @@ namespace MyFarm.Transition
         }
         private IEnumerator LoadSaveDataScene(string sceneName)
         {
+            //TODO 重点改造对象
             yield return Fade(1f);
             if (SceneManager.GetActiveScene().name != "MainScene")//游戏过程中加载另一个场景
             {
-                EventHandler.CallBeforeSceneUnloadEven();
+                EventHandler.CallBeforeSceneUnloadEvent();
                 yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             }
             yield return LoadSceneSetActive(sceneName);
             EventHandler.CallAfterLoadSceneEvent();
             yield return Fade(0f);
+            //将新的存档发送给服务器
         }
         private IEnumerator UnloadScene()
         {
-            EventHandler.CallBeforeSceneUnloadEven();
+            EventHandler.CallBeforeSceneUnloadEvent();
             yield return Fade(1f);
             yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             yield return Fade(0f);
