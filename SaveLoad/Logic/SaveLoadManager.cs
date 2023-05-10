@@ -8,6 +8,7 @@ namespace MyFarm.Save
     public class SaveLoadManager : Singleton<SaveLoadManager>
     {
         private List<Isavealbe> saveList = new();
+        //key为GUID，value为SaveData
         public Dictionary<string, SaveData> dataDic = new();
 
         private string jsonFolder;
@@ -97,7 +98,8 @@ namespace MyFarm.Save
                 gameSaveDataMsg.GamesaveGame.Add(item.Key, SaveData2SaveMsg(item.Value));
             }
 
-            ProtoHelper.ToBytes(gameSaveDataMsg);
+            var stram=ProtoHelper.ToBytes(gameSaveDataMsg);
+            Client.Instance.SendToClient(MsgTypes.LoadRequest, stram);
         }
         //读档
         public void Load()
@@ -122,8 +124,114 @@ namespace MyFarm.Save
             {
                 saveDataMsg.CharacterPos.Add(item.Key, new Vector3Msg { X = item.Value.x, Y = item.Value.y, Z = item.Value.z });
             }
+            foreach (var item in saveData.sceneItemDic)
+            {
+                ListSceneItemMsg listSceneItemMsg = new ListSceneItemMsg();
+                foreach (var sceneItem in item.Value)
+                {
+                    listSceneItemMsg.SceneItems.Add(SceneItem.SceneItem2SceneItemMsg(sceneItem));
 
-            return null;
+                }
+                
+                saveDataMsg.SceneItems.Add(item.Key, listSceneItemMsg);
+            }
+            foreach (var item in saveData.sceneFurnitureDic)
+            {
+                ListSceneFurnitureMsg listSceneFurnitureMsg = new ListSceneFurnitureMsg();
+                foreach (var sceneFurniture in item.Value)
+                {
+                    listSceneFurnitureMsg.SceneFurnitures.Add(SceneFurniture.SceneFurniture2SceneFurnitureMsg(sceneFurniture));
+                }
+                saveDataMsg.SceneFurnitures.Add(item.Key, listSceneFurnitureMsg);
+            }
+            foreach (var item in saveData.tileDetailsDic)
+            {
+                saveDataMsg.TileDetails.Add(item.Key,TileDetails.TileDetails2TileDetailsMsg(item.Value));
+            }
+            foreach (var item in saveData.fristLoadDic)
+            {
+                saveDataMsg.FristLogin.Add(item.Key, item.Value);
+            }
+            foreach (var item in saveData.inventoryDic)
+            {
+                ListInventoryItemMsg listInventoryItemMsg = new ListInventoryItemMsg();
+                foreach (var inventoryItem in item.Value)
+                {
+                    listInventoryItemMsg.InventoryItems.Add(InventoryItem.InventoryItem2InventoryItemMsg(inventoryItem));
+                }
+                saveDataMsg.InventoryItems.Add(item.Key, listInventoryItemMsg);
+            }
+            foreach (var item in saveData.timeDic)
+            {
+                saveDataMsg.Time.Add(item.Key, item.Value);
+            }
+            saveDataMsg.Money = saveData.playerMoney;
+            saveDataMsg.AnimState = saveData.ani;
+
+            return saveDataMsg;
+        }
+        public SaveData SaveMsg2SaveData(SaveGameC2SMsg saveGameC2SMsg)
+        {
+            SaveData saveData = new SaveData();
+            saveData.dataSceneName = saveGameC2SMsg.DataSceneName;
+            foreach (var item in saveGameC2SMsg.CharacterPos)
+            {
+                saveData.characterPos.Add(item.Key, new Vector3(item.Value.X, item.Value.Y, item.Value.Z));
+            }
+            foreach (var item in saveGameC2SMsg.SceneItems)
+            {
+                List<SceneItem> sceneItems = new List<SceneItem>();
+                foreach (var sceneItem in item.Value.SceneItems)
+                {
+                    sceneItems.Add(SceneItem.SceneItemMsg2SceneItem(sceneItem));
+                }
+                saveData.sceneItemDic.Add(item.Key, sceneItems);
+            }
+            foreach (var item in saveGameC2SMsg.SceneFurnitures)
+            {
+                List<SceneFurniture> sceneFurnitures = new List<SceneFurniture>();
+                foreach (var sceneFurniture in item.Value.SceneFurnitures)
+                {
+                    sceneFurnitures.Add(SceneFurniture.SceneFurnitureMsg2SceneFurniture(sceneFurniture));
+                }
+                saveData.sceneFurnitureDic.Add(item.Key, sceneFurnitures);
+            }
+            foreach (var item in saveGameC2SMsg.TileDetails)
+            {
+                saveData.tileDetailsDic.Add(item.Key, TileDetails.TileDetailsMsg2TileDetails(item.Value));
+            }
+            foreach (var item in saveGameC2SMsg.FristLogin)
+            {
+                saveData.fristLoadDic.Add(item.Key, item.Value);
+            }
+            foreach (var item in saveGameC2SMsg.InventoryItems)
+            {
+                List<InventoryItem> inventoryItems = new List<InventoryItem>();
+                foreach (var inventoryItem in item.Value.InventoryItems)
+                {
+                    inventoryItems.Add(InventoryItem.InventoryItemMsg2InventoryItem(inventoryItem));
+                }
+                saveData.inventoryDic.Add(item.Key, inventoryItems);
+            }
+            foreach (var item in saveGameC2SMsg.Time)
+            {
+                saveData.timeDic.Add(item.Key, item.Value);
+            }
+            saveData.playerMoney = saveGameC2SMsg.Money;
+            saveData.ani = saveGameC2SMsg.AnimState;
+            return saveData;
+        }
+        public void LoadGame(GameSaveDataMsg gameSaveDataMsg)
+        {
+            //将gameSaveDataMsg转换并赋值给dataDic
+            foreach (var item in gameSaveDataMsg.GamesaveGame)
+            {
+                dataDic.Add(item.Key, SaveMsg2SaveData(item.Value));
+            }
+            foreach (var save in saveList)
+            {
+                save.LoadGame(dataDic[save.GUID]);
+            }
         }
     }
 }

@@ -108,6 +108,20 @@ public class Client
         Debug.Log(str);
         Send(send_buff);
     }
+    public void SendToClient(int id,byte[] data)
+    {
+        //包体大小(4) 消息ID(4) 包体内容
+        byte[] send_buff = new byte[data.Length + 8];
+        int size = data.Length;
+        var _size = BitConverter.GetBytes(size);
+        var _id = BitConverter.GetBytes(id);
+
+        Array.Copy(_size, 0, send_buff, 0, 4);
+        Array.Copy(_id, 0, send_buff, 4, 4);
+        Array.Copy(data, 0, send_buff, 8, data.Length);
+        print("发送数据长度:"+send_buff.Length);
+        Send(send_buff);
+    }
     public void CloseClient()
     {
         client.Close();

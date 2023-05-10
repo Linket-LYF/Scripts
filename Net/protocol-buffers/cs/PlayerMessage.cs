@@ -25,54 +25,54 @@ public static partial class PlayerMessageReflection {
           "ChNQbGF5ZXJNZXNzYWdlLnByb3RvIi0KClZlY3RvcjNNc2cSCQoBeBgBIAEo",
           "AhIJCgF5GAIgASgCEgkKAXoYAyABKAIiSgoMU2NlbmVJdGVtTXNnEhAKCGNs",
           "aWVudElEGAEgASgFEg4KBml0ZW1JRBgCIAEoBRIYCgNwb3MYAyABKAsyCy5W",
-          "ZWN0b3IzTXNnImQKElNjZW5lbkZ1cm5pdHVyZU1zZxIQCghjbGllbnRJRBgB",
-          "IAEoBRITCgtmdXJuaXR1cmVJRBgCIAEoBRIYCgNwb3MYAyABKAsyCy5WZWN0",
-          "b3IzTXNnEg0KBWJveElEGAQgASgFIvMBCg5UaWxlRGV0YWlsc01zZxINCgVn",
-          "cmlkWBgBIAEoBRINCgVncmlkWRgCIAEoBRIOCgZjYW5EaWcYAyABKAgSDwoH",
-          "Y2FuRHJvcBgEIAEoCBIZChFjYW5QbGFjZUZ1cm5pdHVyZRgFIAEoCBIVCg1p",
-          "c05QQ09ic3RhY2xlGAYgASgIEhMKC2RheVNpbmNlRGlnGAcgASgFEhUKDWRh",
-          "eVNpbmNlV2F0ZXIYCCABKAUSEgoKc2VlZEl0ZW1JRBgJIAEoBRISCgpncm93",
-          "dGhEYXlzGAogASgFEhwKFGRheXNTaW5jZUxhc3RIYXJ2ZXN0GAsgASgFIjEK",
-          "EEludmVudG9yeUl0ZW1Nc2cSDgoGaXRlbUlEGAEgASgFEg0KBWNvdW50GAIg",
-          "ASgFIh4KC0xvZ2luQzJTTXNnEg8KB2FjY291bnQYASABKAkiLgoLTG9naW5T",
-          "MkNNc2cSDwoHYWNjb3VudBgBIAEoCRIOCgZyZXN1bHQYAiABKAUiNQoQTGlz",
-          "dFNjZW5lSXRlbU1zZxIhCgpzY2VuZUl0ZW1zGAEgAygLMg0uU2NlbmVJdGVt",
-          "TXNnIkUKFUxpc3RTY2VuZUZ1cm5pdHVyZU1zZxIsCg9zY2VuZUZ1cm5pdHVy",
-          "ZXMYASADKAsyEy5TY2VuZW5GdXJuaXR1cmVNc2ciQQoUTGlzdEludmVudG9y",
-          "eUl0ZW1Nc2cSKQoOaW52ZW50b3J5SXRlbXMYASADKAsyES5JbnZlbnRvcnlJ",
-          "dGVtTXNnIq0HCg5TYXZlR2FtZUMyU01zZxIPCgdhY2NvdW50GAEgASgJEhUK",
-          "DWRhdGFTY2VuZU5hbWUYAiABKAkSNwoMY2hhcmFjdGVyUG9zGAMgAygLMiEu",
-          "U2F2ZUdhbWVDMlNNc2cuQ2hhcmFjdGVyUG9zRW50cnkSMwoKc2NlbmVJdGVt",
-          "cxgEIAMoCzIfLlNhdmVHYW1lQzJTTXNnLlNjZW5lSXRlbXNFbnRyeRI9Cg9z",
-          "Y2VuZUZ1cm5pdHVyZXMYBSADKAsyJC5TYXZlR2FtZUMyU01zZy5TY2VuZUZ1",
-          "cm5pdHVyZXNFbnRyeRI1Cgt0aWxlRGV0YWlscxgGIAMoCzIgLlNhdmVHYW1l",
-          "QzJTTXNnLlRpbGVEZXRhaWxzRW50cnkSMwoKZnJpc3RMb2dpbhgHIAMoCzIf",
-          "LlNhdmVHYW1lQzJTTXNnLkZyaXN0TG9naW5FbnRyeRI7Cg5pbnZlbnRvcnlJ",
-          "dGVtcxgIIAMoCzIjLlNhdmVHYW1lQzJTTXNnLkludmVudG9yeUl0ZW1zRW50",
-          "cnkSLQoHdGllbURpYxgJIAMoCzIcLlNhdmVHYW1lQzJTTXNnLlRpZW1EaWNF",
-          "bnRyeRINCgVtb25leRgKIAEoAxIRCglhbmltU3RhdGUYCyABKAUaQAoRQ2hh",
-          "cmFjdGVyUG9zRW50cnkSCwoDa2V5GAEgASgJEhoKBXZhbHVlGAIgASgLMgsu",
-          "VmVjdG9yM01zZzoCOAEaRAoPU2NlbmVJdGVtc0VudHJ5EgsKA2tleRgBIAEo",
-          "CRIgCgV2YWx1ZRgCIAEoCzIRLkxpc3RTY2VuZUl0ZW1Nc2c6AjgBGk4KFFNj",
-          "ZW5lRnVybml0dXJlc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEo",
-          "CzIWLkxpc3RTY2VuZUZ1cm5pdHVyZU1zZzoCOAEaQwoQVGlsZURldGFpbHNF",
-          "bnRyeRILCgNrZXkYASABKAkSHgoFdmFsdWUYAiABKAsyDy5UaWxlRGV0YWls",
-          "c01zZzoCOAEaMQoPRnJpc3RMb2dpbkVudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-          "YWx1ZRgCIAEoCDoCOAEaTAoTSW52ZW50b3J5SXRlbXNFbnRyeRILCgNrZXkY",
-          "ASABKAkSJAoFdmFsdWUYAiABKAsyFS5MaXN0SW52ZW50b3J5SXRlbU1zZzoC",
-          "OAEaLgoMVGllbURpY0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-          "AzoCOAEikQEKD0dhbWVTYXZlRGF0YU1zZxI4CgxnYW1lc2F2ZUdhbWUYASAD",
-          "KAsyIi5HYW1lU2F2ZURhdGFNc2cuR2FtZXNhdmVHYW1lRW50cnkaRAoRR2Ft",
-          "ZXNhdmVHYW1lRW50cnkSCwoDa2V5GAEgASgJEh4KBXZhbHVlGAIgASgLMg8u",
-          "U2F2ZUdhbWVDMlNNc2c6AjgBIjEKDlNhdmVHYW1lUzJDTXNnEg8KB2FjY291",
-          "bnQYASABKAkSDgoGcmVzdWx0GAIgASgFIiEKDkxvYWRHYW1lQzJTTXNnEg8K",
-          "B2FjY291bnQYASABKAliBnByb3RvMw=="));
+          "ZWN0b3IzTXNnImMKEVNjZW5lRnVybml0dXJlTXNnEhAKCGNsaWVudElEGAEg",
+          "ASgFEhMKC2Z1cm5pdHVyZUlEGAIgASgFEhgKA3BvcxgDIAEoCzILLlZlY3Rv",
+          "cjNNc2cSDQoFYm94SUQYBCABKAUi8wEKDlRpbGVEZXRhaWxzTXNnEg0KBWdy",
+          "aWRYGAEgASgFEg0KBWdyaWRZGAIgASgFEg4KBmNhbkRpZxgDIAEoCBIPCgdj",
+          "YW5Ecm9wGAQgASgIEhkKEWNhblBsYWNlRnVybml0dXJlGAUgASgIEhUKDWlz",
+          "TlBDT2JzdGFjbGUYBiABKAgSEwoLZGF5U2luY2VEaWcYByABKAUSFQoNZGF5",
+          "U2luY2VXYXRlchgIIAEoBRISCgpzZWVkSXRlbUlEGAkgASgFEhIKCmdyb3d0",
+          "aERheXMYCiABKAUSHAoUZGF5c1NpbmNlTGFzdEhhcnZlc3QYCyABKAUiMQoQ",
+          "SW52ZW50b3J5SXRlbU1zZxIOCgZpdGVtSUQYASABKAUSDQoFY291bnQYAiAB",
+          "KAUiHgoLTG9naW5DMlNNc2cSDwoHYWNjb3VudBgBIAEoCSIuCgtMb2dpblMy",
+          "Q01zZxIPCgdhY2NvdW50GAEgASgJEg4KBnJlc3VsdBgCIAEoBSI1ChBMaXN0",
+          "U2NlbmVJdGVtTXNnEiEKCnNjZW5lSXRlbXMYASADKAsyDS5TY2VuZUl0ZW1N",
+          "c2ciRAoVTGlzdFNjZW5lRnVybml0dXJlTXNnEisKD3NjZW5lRnVybml0dXJl",
+          "cxgBIAMoCzISLlNjZW5lRnVybml0dXJlTXNnIkEKFExpc3RJbnZlbnRvcnlJ",
+          "dGVtTXNnEikKDmludmVudG9yeUl0ZW1zGAEgAygLMhEuSW52ZW50b3J5SXRl",
+          "bU1zZyKcBwoOU2F2ZUdhbWVDMlNNc2cSFQoNZGF0YVNjZW5lTmFtZRgBIAEo",
+          "CRI3CgxjaGFyYWN0ZXJQb3MYAiADKAsyIS5TYXZlR2FtZUMyU01zZy5DaGFy",
+          "YWN0ZXJQb3NFbnRyeRIzCgpzY2VuZUl0ZW1zGAMgAygLMh8uU2F2ZUdhbWVD",
+          "MlNNc2cuU2NlbmVJdGVtc0VudHJ5Ej0KD3NjZW5lRnVybml0dXJlcxgEIAMo",
+          "CzIkLlNhdmVHYW1lQzJTTXNnLlNjZW5lRnVybml0dXJlc0VudHJ5EjUKC3Rp",
+          "bGVEZXRhaWxzGAUgAygLMiAuU2F2ZUdhbWVDMlNNc2cuVGlsZURldGFpbHNF",
+          "bnRyeRIzCgpmcmlzdExvZ2luGAYgAygLMh8uU2F2ZUdhbWVDMlNNc2cuRnJp",
+          "c3RMb2dpbkVudHJ5EjsKDmludmVudG9yeUl0ZW1zGAcgAygLMiMuU2F2ZUdh",
+          "bWVDMlNNc2cuSW52ZW50b3J5SXRlbXNFbnRyeRItCgd0aWVtRGljGAggAygL",
+          "MhwuU2F2ZUdhbWVDMlNNc2cuVGllbURpY0VudHJ5Eg0KBW1vbmV5GAkgASgD",
+          "EhEKCWFuaW1TdGF0ZRgKIAEoBRpAChFDaGFyYWN0ZXJQb3NFbnRyeRILCgNr",
+          "ZXkYASABKAkSGgoFdmFsdWUYAiABKAsyCy5WZWN0b3IzTXNnOgI4ARpECg9T",
+          "Y2VuZUl0ZW1zRW50cnkSCwoDa2V5GAEgASgJEiAKBXZhbHVlGAIgASgLMhEu",
+          "TGlzdFNjZW5lSXRlbU1zZzoCOAEaTgoUU2NlbmVGdXJuaXR1cmVzRW50cnkS",
+          "CwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuTGlzdFNjZW5lRnVybml0",
+          "dXJlTXNnOgI4ARpDChBUaWxlRGV0YWlsc0VudHJ5EgsKA2tleRgBIAEoCRIe",
+          "CgV2YWx1ZRgCIAEoCzIPLlRpbGVEZXRhaWxzTXNnOgI4ARoxCg9GcmlzdExv",
+          "Z2luRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgIOgI4ARpMChNJ",
+          "bnZlbnRvcnlJdGVtc0VudHJ5EgsKA2tleRgBIAEoCRIkCgV2YWx1ZRgCIAEo",
+          "CzIVLkxpc3RJbnZlbnRvcnlJdGVtTXNnOgI4ARouCgxUaWVtRGljRW50cnkS",
+          "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ASKRAQoPR2FtZVNhdmVE",
+          "YXRhTXNnEjgKDGdhbWVzYXZlR2FtZRgBIAMoCzIiLkdhbWVTYXZlRGF0YU1z",
+          "Zy5HYW1lc2F2ZUdhbWVFbnRyeRpEChFHYW1lc2F2ZUdhbWVFbnRyeRILCgNr",
+          "ZXkYASABKAkSHgoFdmFsdWUYAiABKAsyDy5TYXZlR2FtZUMyU01zZzoCOAEi",
+          "MQoOU2F2ZUdhbWVTMkNNc2cSDwoHYWNjb3VudBgBIAEoCRIOCgZyZXN1bHQY",
+          "AiABKAUiIQoOTG9hZEdhbWVDMlNNc2cSDwoHYWNjb3VudBgBIAEoCWIGcHJv",
+          "dG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::Vector3Msg), global::Vector3Msg.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::SceneItemMsg), global::SceneItemMsg.Parser, new[]{ "ClientID", "ItemID", "Pos" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ScenenFurnitureMsg), global::ScenenFurnitureMsg.Parser, new[]{ "ClientID", "FurnitureID", "Pos", "BoxID" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::SceneFurnitureMsg), global::SceneFurnitureMsg.Parser, new[]{ "ClientID", "FurnitureID", "Pos", "BoxID" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::TileDetailsMsg), global::TileDetailsMsg.Parser, new[]{ "GridX", "GridY", "CanDig", "CanDrop", "CanPlaceFurniture", "IsNPCObstacle", "DaySinceDig", "DaySinceWater", "SeedItemID", "GrowthDays", "DaysSinceLastHarvest" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::InventoryItemMsg), global::InventoryItemMsg.Parser, new[]{ "ItemID", "Count" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LoginC2SMsg), global::LoginC2SMsg.Parser, new[]{ "Account" }, null, null, null, null),
@@ -80,7 +80,7 @@ public static partial class PlayerMessageReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::ListSceneItemMsg), global::ListSceneItemMsg.Parser, new[]{ "SceneItems" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ListSceneFurnitureMsg), global::ListSceneFurnitureMsg.Parser, new[]{ "SceneFurnitures" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ListInventoryItemMsg), global::ListInventoryItemMsg.Parser, new[]{ "InventoryItems" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::SaveGameC2SMsg), global::SaveGameC2SMsg.Parser, new[]{ "Account", "DataSceneName", "CharacterPos", "SceneItems", "SceneFurnitures", "TileDetails", "FristLogin", "InventoryItems", "TiemDic", "Money", "AnimState" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, null, null, null, }),
+          new pbr::GeneratedClrTypeInfo(typeof(global::SaveGameC2SMsg), global::SaveGameC2SMsg.Parser, new[]{ "DataSceneName", "CharacterPos", "SceneItems", "SceneFurnitures", "TileDetails", "FristLogin", "InventoryItems", "TiemDic", "Money", "AnimState" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, null, null, null, }),
           new pbr::GeneratedClrTypeInfo(typeof(global::GameSaveDataMsg), global::GameSaveDataMsg.Parser, new[]{ "GamesaveGame" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
           new pbr::GeneratedClrTypeInfo(typeof(global::SaveGameS2CMsg), global::SaveGameS2CMsg.Parser, new[]{ "Account", "Result" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LoadGameC2SMsg), global::LoadGameC2SMsg.Parser, new[]{ "Account" }, null, null, null, null)
@@ -625,16 +625,16 @@ public sealed partial class SceneItemMsg : pb::IMessage<SceneItemMsg>
 
 }
 
-public sealed partial class ScenenFurnitureMsg : pb::IMessage<ScenenFurnitureMsg>
+public sealed partial class SceneFurnitureMsg : pb::IMessage<SceneFurnitureMsg>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
 {
-  private static readonly pb::MessageParser<ScenenFurnitureMsg> _parser = new pb::MessageParser<ScenenFurnitureMsg>(() => new ScenenFurnitureMsg());
+  private static readonly pb::MessageParser<SceneFurnitureMsg> _parser = new pb::MessageParser<SceneFurnitureMsg>(() => new SceneFurnitureMsg());
   private pb::UnknownFieldSet _unknownFields;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public static pb::MessageParser<ScenenFurnitureMsg> Parser { get { return _parser; } }
+  public static pb::MessageParser<SceneFurnitureMsg> Parser { get { return _parser; } }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -650,7 +650,7 @@ public sealed partial class ScenenFurnitureMsg : pb::IMessage<ScenenFurnitureMsg
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public ScenenFurnitureMsg() {
+  public SceneFurnitureMsg() {
     OnConstruction();
   }
 
@@ -658,7 +658,7 @@ public sealed partial class ScenenFurnitureMsg : pb::IMessage<ScenenFurnitureMsg
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public ScenenFurnitureMsg(ScenenFurnitureMsg other) : this() {
+  public SceneFurnitureMsg(SceneFurnitureMsg other) : this() {
     clientID_ = other.clientID_;
     furnitureID_ = other.furnitureID_;
     pos_ = other.pos_ != null ? other.pos_.Clone() : null;
@@ -668,8 +668,8 @@ public sealed partial class ScenenFurnitureMsg : pb::IMessage<ScenenFurnitureMsg
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public ScenenFurnitureMsg Clone() {
-    return new ScenenFurnitureMsg(this);
+  public SceneFurnitureMsg Clone() {
+    return new SceneFurnitureMsg(this);
   }
 
   /// <summary>Field number for the "clientID" field.</summary>
@@ -723,12 +723,12 @@ public sealed partial class ScenenFurnitureMsg : pb::IMessage<ScenenFurnitureMsg
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
-    return Equals(other as ScenenFurnitureMsg);
+    return Equals(other as SceneFurnitureMsg);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool Equals(ScenenFurnitureMsg other) {
+  public bool Equals(SceneFurnitureMsg other) {
     if (ReferenceEquals(other, null)) {
       return false;
     }
@@ -840,7 +840,7 @@ public sealed partial class ScenenFurnitureMsg : pb::IMessage<ScenenFurnitureMsg
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void MergeFrom(ScenenFurnitureMsg other) {
+  public void MergeFrom(SceneFurnitureMsg other) {
     if (other == null) {
       return;
     }
@@ -2358,12 +2358,12 @@ public sealed partial class ListSceneFurnitureMsg : pb::IMessage<ListSceneFurnit
 
   /// <summary>Field number for the "sceneFurnitures" field.</summary>
   public const int SceneFurnituresFieldNumber = 1;
-  private static readonly pb::FieldCodec<global::ScenenFurnitureMsg> _repeated_sceneFurnitures_codec
-      = pb::FieldCodec.ForMessage(10, global::ScenenFurnitureMsg.Parser);
-  private readonly pbc::RepeatedField<global::ScenenFurnitureMsg> sceneFurnitures_ = new pbc::RepeatedField<global::ScenenFurnitureMsg>();
+  private static readonly pb::FieldCodec<global::SceneFurnitureMsg> _repeated_sceneFurnitures_codec
+      = pb::FieldCodec.ForMessage(10, global::SceneFurnitureMsg.Parser);
+  private readonly pbc::RepeatedField<global::SceneFurnitureMsg> sceneFurnitures_ = new pbc::RepeatedField<global::SceneFurnitureMsg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public pbc::RepeatedField<global::ScenenFurnitureMsg> SceneFurnitures {
+  public pbc::RepeatedField<global::SceneFurnitureMsg> SceneFurnitures {
     get { return sceneFurnitures_; }
   }
 
@@ -2702,7 +2702,6 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public SaveGameC2SMsg(SaveGameC2SMsg other) : this() {
-    account_ = other.account_;
     dataSceneName_ = other.dataSceneName_;
     characterPos_ = other.characterPos_.Clone();
     sceneItems_ = other.sceneItems_.Clone();
@@ -2722,20 +2721,8 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     return new SaveGameC2SMsg(this);
   }
 
-  /// <summary>Field number for the "account" field.</summary>
-  public const int AccountFieldNumber = 1;
-  private string account_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Account {
-    get { return account_; }
-    set {
-      account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
-  }
-
   /// <summary>Field number for the "dataSceneName" field.</summary>
-  public const int DataSceneNameFieldNumber = 2;
+  public const int DataSceneNameFieldNumber = 1;
   private string dataSceneName_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2747,9 +2734,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "characterPos" field.</summary>
-  public const int CharacterPosFieldNumber = 3;
+  public const int CharacterPosFieldNumber = 2;
   private static readonly pbc::MapField<string, global::Vector3Msg>.Codec _map_characterPos_codec
-      = new pbc::MapField<string, global::Vector3Msg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Vector3Msg.Parser), 26);
+      = new pbc::MapField<string, global::Vector3Msg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Vector3Msg.Parser), 18);
   private readonly pbc::MapField<string, global::Vector3Msg> characterPos_ = new pbc::MapField<string, global::Vector3Msg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2758,9 +2745,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "sceneItems" field.</summary>
-  public const int SceneItemsFieldNumber = 4;
+  public const int SceneItemsFieldNumber = 3;
   private static readonly pbc::MapField<string, global::ListSceneItemMsg>.Codec _map_sceneItems_codec
-      = new pbc::MapField<string, global::ListSceneItemMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::ListSceneItemMsg.Parser), 34);
+      = new pbc::MapField<string, global::ListSceneItemMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::ListSceneItemMsg.Parser), 26);
   private readonly pbc::MapField<string, global::ListSceneItemMsg> sceneItems_ = new pbc::MapField<string, global::ListSceneItemMsg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2769,9 +2756,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "sceneFurnitures" field.</summary>
-  public const int SceneFurnituresFieldNumber = 5;
+  public const int SceneFurnituresFieldNumber = 4;
   private static readonly pbc::MapField<string, global::ListSceneFurnitureMsg>.Codec _map_sceneFurnitures_codec
-      = new pbc::MapField<string, global::ListSceneFurnitureMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::ListSceneFurnitureMsg.Parser), 42);
+      = new pbc::MapField<string, global::ListSceneFurnitureMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::ListSceneFurnitureMsg.Parser), 34);
   private readonly pbc::MapField<string, global::ListSceneFurnitureMsg> sceneFurnitures_ = new pbc::MapField<string, global::ListSceneFurnitureMsg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2780,9 +2767,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "tileDetails" field.</summary>
-  public const int TileDetailsFieldNumber = 6;
+  public const int TileDetailsFieldNumber = 5;
   private static readonly pbc::MapField<string, global::TileDetailsMsg>.Codec _map_tileDetails_codec
-      = new pbc::MapField<string, global::TileDetailsMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::TileDetailsMsg.Parser), 50);
+      = new pbc::MapField<string, global::TileDetailsMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::TileDetailsMsg.Parser), 42);
   private readonly pbc::MapField<string, global::TileDetailsMsg> tileDetails_ = new pbc::MapField<string, global::TileDetailsMsg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2791,9 +2778,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "fristLogin" field.</summary>
-  public const int FristLoginFieldNumber = 7;
+  public const int FristLoginFieldNumber = 6;
   private static readonly pbc::MapField<string, bool>.Codec _map_fristLogin_codec
-      = new pbc::MapField<string, bool>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForBool(16, false), 58);
+      = new pbc::MapField<string, bool>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForBool(16, false), 50);
   private readonly pbc::MapField<string, bool> fristLogin_ = new pbc::MapField<string, bool>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2802,9 +2789,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "inventoryItems" field.</summary>
-  public const int InventoryItemsFieldNumber = 8;
+  public const int InventoryItemsFieldNumber = 7;
   private static readonly pbc::MapField<string, global::ListInventoryItemMsg>.Codec _map_inventoryItems_codec
-      = new pbc::MapField<string, global::ListInventoryItemMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::ListInventoryItemMsg.Parser), 66);
+      = new pbc::MapField<string, global::ListInventoryItemMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::ListInventoryItemMsg.Parser), 58);
   private readonly pbc::MapField<string, global::ListInventoryItemMsg> inventoryItems_ = new pbc::MapField<string, global::ListInventoryItemMsg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2813,9 +2800,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "tiemDic" field.</summary>
-  public const int TiemDicFieldNumber = 9;
+  public const int TiemDicFieldNumber = 8;
   private static readonly pbc::MapField<string, long>.Codec _map_tiemDic_codec
-      = new pbc::MapField<string, long>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt64(16, 0L), 74);
+      = new pbc::MapField<string, long>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt64(16, 0L), 66);
   private readonly pbc::MapField<string, long> tiemDic_ = new pbc::MapField<string, long>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2824,7 +2811,7 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "money" field.</summary>
-  public const int MoneyFieldNumber = 10;
+  public const int MoneyFieldNumber = 9;
   private long money_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2836,7 +2823,7 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   }
 
   /// <summary>Field number for the "animState" field.</summary>
-  public const int AnimStateFieldNumber = 11;
+  public const int AnimStateFieldNumber = 10;
   private int animState_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2862,7 +2849,6 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if (Account != other.Account) return false;
     if (DataSceneName != other.DataSceneName) return false;
     if (!CharacterPos.Equals(other.CharacterPos)) return false;
     if (!SceneItems.Equals(other.SceneItems)) return false;
@@ -2880,7 +2866,6 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (Account.Length != 0) hash ^= Account.GetHashCode();
     if (DataSceneName.Length != 0) hash ^= DataSceneName.GetHashCode();
     hash ^= CharacterPos.GetHashCode();
     hash ^= SceneItems.GetHashCode();
@@ -2909,12 +2894,8 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (Account.Length != 0) {
-      output.WriteRawTag(10);
-      output.WriteString(Account);
-    }
     if (DataSceneName.Length != 0) {
-      output.WriteRawTag(18);
+      output.WriteRawTag(10);
       output.WriteString(DataSceneName);
     }
     characterPos_.WriteTo(output, _map_characterPos_codec);
@@ -2925,11 +2906,11 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     inventoryItems_.WriteTo(output, _map_inventoryItems_codec);
     tiemDic_.WriteTo(output, _map_tiemDic_codec);
     if (Money != 0L) {
-      output.WriteRawTag(80);
+      output.WriteRawTag(72);
       output.WriteInt64(Money);
     }
     if (AnimState != 0) {
-      output.WriteRawTag(88);
+      output.WriteRawTag(80);
       output.WriteInt32(AnimState);
     }
     if (_unknownFields != null) {
@@ -2942,12 +2923,8 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (Account.Length != 0) {
-      output.WriteRawTag(10);
-      output.WriteString(Account);
-    }
     if (DataSceneName.Length != 0) {
-      output.WriteRawTag(18);
+      output.WriteRawTag(10);
       output.WriteString(DataSceneName);
     }
     characterPos_.WriteTo(ref output, _map_characterPos_codec);
@@ -2958,11 +2935,11 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     inventoryItems_.WriteTo(ref output, _map_inventoryItems_codec);
     tiemDic_.WriteTo(ref output, _map_tiemDic_codec);
     if (Money != 0L) {
-      output.WriteRawTag(80);
+      output.WriteRawTag(72);
       output.WriteInt64(Money);
     }
     if (AnimState != 0) {
-      output.WriteRawTag(88);
+      output.WriteRawTag(80);
       output.WriteInt32(AnimState);
     }
     if (_unknownFields != null) {
@@ -2975,9 +2952,6 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (Account.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
-    }
     if (DataSceneName.Length != 0) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(DataSceneName);
     }
@@ -3005,9 +2979,6 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
   public void MergeFrom(SaveGameC2SMsg other) {
     if (other == null) {
       return;
-    }
-    if (other.Account.Length != 0) {
-      Account = other.Account;
     }
     if (other.DataSceneName.Length != 0) {
       DataSceneName = other.DataSceneName;
@@ -3041,46 +3012,42 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 10: {
-          Account = input.ReadString();
-          break;
-        }
-        case 18: {
           DataSceneName = input.ReadString();
           break;
         }
-        case 26: {
+        case 18: {
           characterPos_.AddEntriesFrom(input, _map_characterPos_codec);
           break;
         }
-        case 34: {
+        case 26: {
           sceneItems_.AddEntriesFrom(input, _map_sceneItems_codec);
           break;
         }
-        case 42: {
+        case 34: {
           sceneFurnitures_.AddEntriesFrom(input, _map_sceneFurnitures_codec);
           break;
         }
-        case 50: {
+        case 42: {
           tileDetails_.AddEntriesFrom(input, _map_tileDetails_codec);
           break;
         }
-        case 58: {
+        case 50: {
           fristLogin_.AddEntriesFrom(input, _map_fristLogin_codec);
           break;
         }
-        case 66: {
+        case 58: {
           inventoryItems_.AddEntriesFrom(input, _map_inventoryItems_codec);
           break;
         }
-        case 74: {
+        case 66: {
           tiemDic_.AddEntriesFrom(input, _map_tiemDic_codec);
           break;
         }
-        case 80: {
+        case 72: {
           Money = input.ReadInt64();
           break;
         }
-        case 88: {
+        case 80: {
           AnimState = input.ReadInt32();
           break;
         }
@@ -3100,46 +3067,42 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 10: {
-          Account = input.ReadString();
-          break;
-        }
-        case 18: {
           DataSceneName = input.ReadString();
           break;
         }
-        case 26: {
+        case 18: {
           characterPos_.AddEntriesFrom(ref input, _map_characterPos_codec);
           break;
         }
-        case 34: {
+        case 26: {
           sceneItems_.AddEntriesFrom(ref input, _map_sceneItems_codec);
           break;
         }
-        case 42: {
+        case 34: {
           sceneFurnitures_.AddEntriesFrom(ref input, _map_sceneFurnitures_codec);
           break;
         }
-        case 50: {
+        case 42: {
           tileDetails_.AddEntriesFrom(ref input, _map_tileDetails_codec);
           break;
         }
-        case 58: {
+        case 50: {
           fristLogin_.AddEntriesFrom(ref input, _map_fristLogin_codec);
           break;
         }
-        case 66: {
+        case 58: {
           inventoryItems_.AddEntriesFrom(ref input, _map_inventoryItems_codec);
           break;
         }
-        case 74: {
+        case 66: {
           tiemDic_.AddEntriesFrom(ref input, _map_tiemDic_codec);
           break;
         }
-        case 80: {
+        case 72: {
           Money = input.ReadInt64();
           break;
         }
-        case 88: {
+        case 80: {
           AnimState = input.ReadInt32();
           break;
         }

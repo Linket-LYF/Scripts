@@ -14,7 +14,7 @@ message SceneItemMsg{
 	int32 itemID=2;
 	Vector3Msg pos=3;
 }
-message ScenenFurnitureMsg{
+message SceneFurnitureMsg{
 	int32 clientID=1;
 	int32 furnitureID=2;
 	Vector3Msg pos=3;
@@ -50,7 +50,7 @@ message ListSceneItemMsg{
 	repeated SceneItemMsg sceneItems=1;
 }
 message ListSceneFurnitureMsg{
-	repeated ScenenFurnitureMsg sceneFurnitures=1;
+	repeated SceneFurnitureMsg sceneFurnitures=1;
 }
 message ListInventoryItemMsg{
 	repeated InventoryItemMsg inventoryItems=1;
