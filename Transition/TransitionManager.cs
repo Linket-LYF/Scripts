@@ -47,7 +47,7 @@ namespace MyFarm.Transition
 
         private void OnStartNewGame()
         {
-            StartCoroutine(LoadSaveDataScene(startSceneName));
+            StartCoroutine(LoadNewSaveDataScene(startSceneName));
         }
 
         private void OnTransitionEvent(string sceneName, Vector3 pos)
@@ -101,7 +101,7 @@ namespace MyFarm.Transition
             isFade = false;
             fadeCanvasGroup.blocksRaycasts = false;
         }
-        private IEnumerator LoadSaveDataScene(string sceneName)
+        private IEnumerator LoadNewSaveDataScene(string sceneName)
         {
             //TODO 重点改造对象
             yield return Fade(1f);
@@ -116,6 +116,20 @@ namespace MyFarm.Transition
             yield return Fade(0f);
             //将新的存档发送给服务器
             SaveLoadManager.Instance.Save();
+        }
+        private IEnumerator LoadSaveDataScene(string sceneName)
+        {
+            //TODO 重点改造对象
+            yield return Fade(1f);
+            if (SceneManager.GetActiveScene().name != "MainScene")//游戏过程中加载另一个场景
+            {
+                EventHandler.CallBeforeSceneUnloadEvent();
+                yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            }
+            yield return LoadSceneSetActive(sceneName);
+            currentSceneName = sceneName;
+            EventHandler.CallAfterLoadSceneEvent();
+            yield return Fade(0f);
         }
         private IEnumerator UnloadScene()
         {

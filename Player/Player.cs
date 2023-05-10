@@ -344,8 +344,6 @@ public class Player : MonoBehaviour, Isavealbe
     {
         var vector3Msg = saveData.CharacterPos[this.name];
         var charaPos = new Vector3(vector3Msg.X, vector3Msg.Y, vector3Msg.Z);
-        Debug.Log(playerId);
-        Debug.Log(playerIdtext.text);
         playerIdtext.text = playerId;
         transform.position = charaPos;
     }

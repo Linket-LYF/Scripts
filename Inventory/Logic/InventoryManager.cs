@@ -287,8 +287,8 @@ namespace MyFarm.Inventory
         }
         public void AddBoxItem(EmptyBox box)
         {
-
             string key = box.name + box.boxID;
+            print(key);
             if (!boxItemDic.ContainsKey(key))
                 boxItemDic.Add(key, box.boxBag.itemBagList);
 
@@ -303,7 +303,7 @@ namespace MyFarm.Inventory
             {
                 listInventoryItemMsg.InventoryItems.Add(InventoryItem.InventoryItem2InventoryItemMsg(inventoryItem));
             }
-            saveData.InventoryItems.Add(playerBag.name, listInventoryItemMsg);
+            saveData.InventoryItems[playerBag.name] = listInventoryItemMsg;
             foreach (var item in boxItemDic)
             {
                 ListInventoryItemMsg listMsg = new();
@@ -311,8 +311,9 @@ namespace MyFarm.Inventory
                 {
                     listMsg.InventoryItems.Add(InventoryItem.InventoryItem2InventoryItemMsg(inventoryItem));
                 }
-                saveData.InventoryItems.Add(item.Key, listMsg);
+                saveData.InventoryItems[item.Key] = listMsg;
             }
+            print(saveData.InventoryItems);
             return saveData;
         }
 
@@ -320,7 +321,8 @@ namespace MyFarm.Inventory
         {
             //money
             this.playerMoney = saveData.Money;
-            playerBag = Instantiate(playerBagTemp);
+            playerBag.itemBagList.Clear();
+            boxItemDic.Clear();
             foreach (var inventoryItem in saveData.InventoryItems[playerBag.name].InventoryItems)
             {
                 playerBag.itemBagList.Add(InventoryItem.InventoryItemMsg2InventoryItem(inventoryItem));
@@ -335,6 +337,8 @@ namespace MyFarm.Inventory
                     }
                 }
             }
+            print(playerBag.itemBagList);
+            print(boxItemDic);
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);
         }
     }

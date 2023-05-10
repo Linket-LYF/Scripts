@@ -204,7 +204,7 @@ namespace MyFarm.Inventory
                     listSceneItemMsg.SceneItems.Add(SceneItem.SceneItem2SceneItemMsg(sceneItem));
 
                 }
-                saveData.SceneItems.Add(item.Key, listSceneItemMsg);
+                saveData.SceneItems[item.Key] = listSceneItemMsg;
             }
             foreach (var item in sceneFurnitureDic)
             {
@@ -213,13 +213,14 @@ namespace MyFarm.Inventory
                 {
                     listSceneFurnitureMsg.SceneFurnitures.Add(SceneFurniture.SceneFurniture2SceneFurnitureMsg(sceneFurniture));
                 }
-                saveData.SceneFurnitures.Add(item.Key, listSceneFurnitureMsg);
+                saveData.SceneFurnitures[item.Key] = listSceneFurnitureMsg;
             }
             return saveData;
         }
 
         public void LoadGame(SaveGameC2SMsg saveData)
         {
+            sceneItemDic.Clear();
             foreach (var item in saveData.SceneItems)
             {
                 List<SceneItem> sceneItems = new();
@@ -229,6 +230,7 @@ namespace MyFarm.Inventory
                 }
                 sceneItemDic[item.Key] = sceneItems;
             }
+            sceneFurnitureDic.Clear();
             foreach (var item in saveData.SceneFurnitures)
             {
                 List<SceneFurniture> sceneFurnitures = new();

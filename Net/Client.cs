@@ -88,7 +88,7 @@ public class Client
             catch (System.Exception e)
             {
                 //打印调用栈
-                Debug.Log(e.StackTrace);
+                // Debug.Log(e.StackTrace);
                 Debug.Log(e.Message);
                 CloseClient();
             }
