@@ -212,28 +212,27 @@ public class TimeManager : Singleton<TimeManager>, Isavealbe
         return LightShift.Morning;
     }
 
-    public SaveData SaveGame()
+    public SaveGameC2SMsg SaveGame()
     {
-        SaveData saveData = new SaveData();
-        saveData.timeDic = new Dictionary<string, int>();
-        saveData.timeDic.Add("gameYear", gameYear);
-        saveData.timeDic.Add("gameSeason", (int)gameSeason);
-        saveData.timeDic.Add("gameMonth", gameMonth);
-        saveData.timeDic.Add("gameDay", gameDay);
-        saveData.timeDic.Add("gameHour", gameHour);
-        saveData.timeDic.Add("gameMinute", gameMinute);
-        saveData.timeDic.Add("gameSecond", gameSecond);
+        SaveGameC2SMsg saveData = new();
+        saveData.TiemDic.Add("gameYear", gameYear);
+        saveData.TiemDic.Add("gameSeason", (int)gameSeason);
+        saveData.TiemDic.Add("gameMonth", gameMonth);
+        saveData.TiemDic.Add("gameDay", gameDay);
+        saveData.TiemDic.Add("gameHour", gameHour);
+        saveData.TiemDic.Add("gameMinute", gameMinute);
+        saveData.TiemDic.Add("gameSecond", gameSecond);
         return saveData;
     }
 
-    public void LoadGame(SaveData saveData)
+    public void LoadGame(SaveGameC2SMsg saveData)
     {
-        gameYear = saveData.timeDic["gameYear"];
-        gameSeason = (Season)saveData.timeDic["gameSeason"];
-        gameMonth = saveData.timeDic["gameMonth"];
-        gameDay = saveData.timeDic["gameDay"];
-        gameHour = saveData.timeDic["gameHour"];
-        gameMinute = saveData.timeDic["gameMinute"];
-        gameSecond = saveData.timeDic["gameSecond"];
+        gameYear = saveData.TiemDic["gameYear"];
+        gameSeason = (Season)saveData.TiemDic["gameSeason"];
+        gameMonth = saveData.TiemDic["gameMonth"];
+        gameDay = saveData.TiemDic["gameDay"];
+        gameHour = saveData.TiemDic["gameHour"];
+        gameMinute = saveData.TiemDic["gameMinute"];
+        gameSecond = saveData.TiemDic["gameSecond"];
     }
 }

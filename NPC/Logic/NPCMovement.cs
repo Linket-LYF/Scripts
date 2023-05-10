@@ -406,40 +406,38 @@ public class NPCMovement : MonoBehaviour, Isavealbe
 
     }
 
-    public SaveData SaveGame()
+    public SaveGameC2SMsg SaveGame()
     {
-        SaveData saveData = new SaveData();
-        saveData.characterPos = new Dictionary<string, SerializableVector3>();
-        saveData.characterPos.Add("targetGridPos", new SerializableVector3(targetGridPos));
-        saveData.characterPos.Add("currentGridPos", new SerializableVector3(transform.position));
-        saveData.dataSceneName = currentScene;
-        saveData.targetScene = this.targetScene;
-        saveData.timeDic = new Dictionary<string, int>();
-        saveData.timeDic.Add("currentSeason", (int)curSeason);
+        SaveGameC2SMsg saveData = new();
+        saveData.CharacterPos.Add("targetGridPos", new Vector3Msg { X = targetGridPos.x, Y = targetGridPos.y, Z = targetGridPos.z });
+        saveData.CharacterPos.Add("currentGridPos", new Vector3Msg { X = transform.position.x, Y = transform.position.y, Z = transform.position.z });
+        saveData.DataSceneName = currentScene;
+        // saveData.targetScene = this.targetScene;
+        saveData.TiemDic.Add("currentSeason", (int)curSeason);
         if (stopAnimationClip != null)
         {
-            saveData.ani = stopAnimationClip.GetInstanceID();
+            saveData.AnimState = stopAnimationClip.GetInstanceID();
         }
         return saveData;
     }
 
-    public void LoadGame(SaveData saveData)
+    public void LoadGame(SaveGameC2SMsg saveData)
     {
         isFristLoad = false;
         isInit = true;
-        currentScene = saveData.dataSceneName;
-        targetScene = saveData.targetScene;
-        Vector3 pos = saveData.characterPos["currentGridPos"].ToVertor3();
-        Vector3Int gridPos = (Vector3Int)saveData.characterPos["targetGridPos"].ToVector2Int();
+        currentScene = saveData.DataSceneName;
+        //targetScene = saveData.targetScene;
+        Vector3 pos = ProtoHelper.Vector3Msg2Vector3(saveData.CharacterPos[this.name]);
+        Vector3Int gridPos = (Vector3Int)ProtoHelper.Vector3Msg2Vector2Int(saveData.CharacterPos["targetGridPos"]);
         transform.position = pos;
         targetGridPos = gridPos;
 
-        if (saveData.ani != 0)
+        if (saveData.AnimState != 0)
         {
-            this.stopAnimationClip = Resources.InstanceIDToObject(saveData.ani) as AnimationClip;
+            this.stopAnimationClip = Resources.InstanceIDToObject(saveData.AnimState) as AnimationClip;
         }
-        this.interactable = saveData.interactalbe;
+        // this.interactable = saveData.interactalbe;
         isInit = true;
-        this.curSeason = (Season)saveData.timeDic["currentSeason"];
+        this.curSeason = (Season)saveData.TiemDic["currentSeason"];
     }
 }

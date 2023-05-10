@@ -191,20 +191,53 @@ namespace MyFarm.Inventory
             }
         }
 
-        public SaveData SaveGame()
+        public SaveGameC2SMsg SaveGame()
         {
             GetAllSceneItems();
             GetSceneFurniture();
-            SaveData saveData = new SaveData();
-            saveData.sceneItemDic = this.sceneItemDic;
-            saveData.sceneFurnitureDic = this.sceneFurnitureDic;
+            SaveGameC2SMsg saveData = new();
+            foreach (var item in sceneItemDic)
+            {
+                ListSceneItemMsg listSceneItemMsg = new ListSceneItemMsg();
+                foreach (var sceneItem in item.Value)
+                {
+                    listSceneItemMsg.SceneItems.Add(SceneItem.SceneItem2SceneItemMsg(sceneItem));
+
+                }
+                saveData.SceneItems.Add(item.Key, listSceneItemMsg);
+            }
+            foreach (var item in sceneFurnitureDic)
+            {
+                ListSceneFurnitureMsg listSceneFurnitureMsg = new ListSceneFurnitureMsg();
+                foreach (var sceneFurniture in item.Value)
+                {
+                    listSceneFurnitureMsg.SceneFurnitures.Add(SceneFurniture.SceneFurniture2SceneFurnitureMsg(sceneFurniture));
+                }
+                saveData.SceneFurnitures.Add(item.Key, listSceneFurnitureMsg);
+            }
             return saveData;
         }
 
-        public void LoadGame(SaveData saveData)
+        public void LoadGame(SaveGameC2SMsg saveData)
         {
-            this.sceneItemDic = saveData.sceneItemDic;
-            this.sceneFurnitureDic = saveData.sceneFurnitureDic;
+            foreach (var item in saveData.SceneItems)
+            {
+                List<SceneItem> sceneItems = new();
+                foreach (var sceneItem in item.Value.SceneItems)
+                {
+                    sceneItems.Add(SceneItem.SceneItemMsg2SceneItem(sceneItem));
+                }
+                sceneItemDic[item.Key] = sceneItems;
+            }
+            foreach (var item in saveData.SceneFurnitures)
+            {
+                List<SceneFurniture> sceneFurnitures = new();
+                foreach (var sceneFurniture in item.Value.SceneFurnitures)
+                {
+                    sceneFurnitures.Add(SceneFurniture.SceneFurnitureMsg2SceneFurniture(sceneFurniture));
+                }
+                sceneFurnitureDic[item.Key] = sceneFurnitures;
+            }
             RecreateAllItems();
             RebulidFurniture();
         }

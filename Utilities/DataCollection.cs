@@ -26,18 +26,18 @@ public struct InventoryItem
     public int itemID;
     public int itemAmount;
 
-    public InventoryItemMsg InventoryItem2InventoryItemMsg(InventoryItem inventoryItem)
+    public static InventoryItemMsg InventoryItem2InventoryItemMsg(InventoryItem inventoryItem)
     {
         InventoryItemMsg inventoryItemMsg = new InventoryItemMsg();
         inventoryItemMsg.ItemID = inventoryItem.itemID;
-        inventoryItemMsg.ItemAmount = inventoryItem.itemAmount;
+        inventoryItemMsg.Count = inventoryItem.itemAmount;
         return inventoryItemMsg;
     }
-    public InventoryItem InventoryItemMsg2InventoryItem(InventoryItemMsg inventoryItemMsg)
+    public static InventoryItem InventoryItemMsg2InventoryItem(InventoryItemMsg inventoryItemMsg)
     {
         InventoryItem inventoryItem = new InventoryItem();
         inventoryItem.itemID = inventoryItemMsg.ItemID;
-        inventoryItem.itemAmount = inventoryItemMsg.ItemAmount;
+        inventoryItem.itemAmount = inventoryItemMsg.Count;
         return inventoryItem;
     }
 }
@@ -67,8 +67,8 @@ public class SceneItem
     public int itemID;
     public SerializableVector3 position;
     public int clientID;
-    
-    public SceneItemMsg SceneItem2SceneItemMsg(SceneItem sceneItem)
+
+    public static SceneItemMsg SceneItem2SceneItemMsg(SceneItem sceneItem)
     {
         SceneItemMsg sceneItemMsg = new SceneItemMsg();
         sceneItemMsg.ItemID = sceneItem.itemID;
@@ -76,7 +76,7 @@ public class SceneItem
         sceneItemMsg.ClientID = sceneItem.clientID;
         return sceneItemMsg;
     }
-    public SceneItem SceneItemMsg2SceneItem(SceneItemMsg sceneItemMsg)
+    public static SceneItem SceneItemMsg2SceneItem(SceneItemMsg sceneItemMsg)
     {
         SceneItem sceneItem = new SceneItem();
         sceneItem.itemID = sceneItemMsg.ItemID;
@@ -95,19 +95,19 @@ public class SceneFurniture
     public int boxID;
     public int clientID;
 
-    public SceneFurnitureMsg SceneFurniture2SceneFurnitureMsg(SceneFurniture sceneFurniture)
+    public static SceneFurnitureMsg SceneFurniture2SceneFurnitureMsg(SceneFurniture sceneFurniture)
     {
         SceneFurnitureMsg sceneFurnitureMsg = new SceneFurnitureMsg();
-        sceneFurnitureMsg.ItemID = sceneFurniture.itemID;
+        sceneFurnitureMsg.FurnitureID = sceneFurniture.itemID;
         sceneFurnitureMsg.Pos = new Vector3Msg { X = sceneFurniture.position.x, Y = sceneFurniture.position.y, Z = sceneFurniture.position.z };
         sceneFurnitureMsg.BoxID = sceneFurniture.boxID;
         sceneFurnitureMsg.ClientID = sceneFurniture.clientID;
         return sceneFurnitureMsg;
     }
-    public SceneFurniture SceneFurnitureMsg2SceneFurniture(SceneFurnitureMsg sceneFurnitureMsg)
+    public static SceneFurniture SceneFurnitureMsg2SceneFurniture(SceneFurnitureMsg sceneFurnitureMsg)
     {
         SceneFurniture sceneFurniture = new SceneFurniture();
-        sceneFurniture.itemID = sceneFurnitureMsg.ItemID;
+        sceneFurniture.itemID = sceneFurnitureMsg.FurnitureID;
         sceneFurniture.position = new SerializableVector3(new Vector3(sceneFurnitureMsg.Pos.X, sceneFurnitureMsg.Pos.Y, sceneFurnitureMsg.Pos.Z));
         sceneFurniture.boxID = sceneFurnitureMsg.BoxID;
         sceneFurniture.clientID = sceneFurnitureMsg.ClientID;
@@ -137,7 +137,7 @@ public class TileDetails
     public int growthDays = -1;
     public int daysSinceLastHarvest = -1;
 
-    public TileDetailsMsg TileDetails2TileDetailsMsg(TileDetails tileDetails)
+    public static TileDetailsMsg TileDetails2TileDetailsMsg(TileDetails tileDetails)
     {
         TileDetailsMsg tileDetailsMsg = new TileDetailsMsg();
         tileDetailsMsg.GridX = tileDetails.gridX;
@@ -153,7 +153,7 @@ public class TileDetails
         tileDetailsMsg.DaysSinceLastHarvest = tileDetails.daysSinceLastHarvest;
         return tileDetailsMsg;
     }
-    public TileDetails TileDetailsMsg2TileDetails(TileDetailsMsg tileDetailsMsg)
+    public static TileDetails TileDetailsMsg2TileDetails(TileDetailsMsg tileDetailsMsg)
     {
         TileDetails tileDetails = new TileDetails();
         tileDetails.gridX = tileDetailsMsg.GridX;

@@ -8,7 +8,7 @@ public class MessageHandle
     private static MessageHandle instance = new();
     public static MessageHandle Instance => instance;
 
-    byte[] data = new byte[4096];
+    byte[] data = new byte[40960];
     int msgLength = 0;
 
     public void CopyToData(byte[] buffer, int length)

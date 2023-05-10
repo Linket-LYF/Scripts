@@ -358,18 +358,30 @@ namespace MyFarm.Map
             return false;
         }
 
-        public SaveData SaveGame()
+        public SaveGameC2SMsg SaveGame()
         {
-            SaveData saveData = new SaveData();
-            saveData.tileDetailsDic = this.tileDetailsDic;
-            saveData.fristLoadDic = this.fristLoadDic;
+            SaveGameC2SMsg saveData = new();
+            foreach (var item in tileDetailsDic)
+            {
+                saveData.TileDetails.Add(item.Key, TileDetails.TileDetails2TileDetailsMsg(item.Value));
+            }
+            foreach (var item in fristLoadDic)
+            {
+                saveData.FristLogin.Add(item.Key, item.Value);
+            }
             return saveData;
         }
 
-        public void LoadGame(SaveData saveData)
+        public void LoadGame(SaveGameC2SMsg saveData)
         {
-            this.tileDetailsDic = saveData.tileDetailsDic;
-            this.fristLoadDic = saveData.fristLoadDic;
+            foreach (var item in saveData.TileDetails)
+            {
+                tileDetailsDic[item.Key] = TileDetails.TileDetailsMsg2TileDetails(item.Value);
+            }
+            foreach (var item in saveData.FristLogin)
+            {
+                fristLoadDic[item.Key] = item.Value;
+            }
         }
     }
 

@@ -15,10 +15,10 @@ public class LoginHandle
         LoginMsgS2C response = JsonHelper.ToObject<LoginMsgS2C>(data);
         if (response.result == 0)
         {
-            GameManager.Instance.Player.playerId = response.account;
+            GameManager.Instance.player.playerId = response.account;
             //开始游戏
-            EventHandler.CallStartNewGame();
             MenuManager.Instance.ShowTips("登录成功");
+            SaveLoadManager.Instance.Load();
         }
         else
         {

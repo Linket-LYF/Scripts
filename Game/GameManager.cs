@@ -4,18 +4,12 @@ using UnityEngine;
 using MyFarm.Inventory;
 public class GameManager : Singleton<GameManager>
 {
-    Player player;
+    public Player player;
     Dictionary<string, OtherPlayer> otherPlayers = new();
 
     public Dictionary<string, bool> playerReady = new();
     public List<Item> sceneItems = new();
     public List<SceneFurniture> sceneFurnitures = new();
-
-    public Player Player
-    {
-        get => player;
-        set => player = value;
-    }
 
     public Dictionary<string, OtherPlayer> OtherPlayers
     {

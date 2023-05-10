@@ -49,7 +49,7 @@ public static partial class PlayerMessageReflection {
           "bnRyeRIzCgpmcmlzdExvZ2luGAYgAygLMh8uU2F2ZUdhbWVDMlNNc2cuRnJp",
           "c3RMb2dpbkVudHJ5EjsKDmludmVudG9yeUl0ZW1zGAcgAygLMiMuU2F2ZUdh",
           "bWVDMlNNc2cuSW52ZW50b3J5SXRlbXNFbnRyeRItCgd0aWVtRGljGAggAygL",
-          "MhwuU2F2ZUdhbWVDMlNNc2cuVGllbURpY0VudHJ5Eg0KBW1vbmV5GAkgASgD",
+          "MhwuU2F2ZUdhbWVDMlNNc2cuVGllbURpY0VudHJ5Eg0KBW1vbmV5GAkgASgF",
           "EhEKCWFuaW1TdGF0ZRgKIAEoBRpAChFDaGFyYWN0ZXJQb3NFbnRyeRILCgNr",
           "ZXkYASABKAkSGgoFdmFsdWUYAiABKAsyCy5WZWN0b3IzTXNnOgI4ARpECg9T",
           "Y2VuZUl0ZW1zRW50cnkSCwoDa2V5GAEgASgJEiAKBXZhbHVlGAIgASgLMhEu",
@@ -60,13 +60,17 @@ public static partial class PlayerMessageReflection {
           "Z2luRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgIOgI4ARpMChNJ",
           "bnZlbnRvcnlJdGVtc0VudHJ5EgsKA2tleRgBIAEoCRIkCgV2YWx1ZRgCIAEo",
           "CzIVLkxpc3RJbnZlbnRvcnlJdGVtTXNnOgI4ARouCgxUaWVtRGljRW50cnkS",
-          "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ASKRAQoPR2FtZVNhdmVE",
-          "YXRhTXNnEjgKDGdhbWVzYXZlR2FtZRgBIAMoCzIiLkdhbWVTYXZlRGF0YU1z",
-          "Zy5HYW1lc2F2ZUdhbWVFbnRyeRpEChFHYW1lc2F2ZUdhbWVFbnRyeRILCgNr",
-          "ZXkYASABKAkSHgoFdmFsdWUYAiABKAsyDy5TYXZlR2FtZUMyU01zZzoCOAEi",
-          "MQoOU2F2ZUdhbWVTMkNNc2cSDwoHYWNjb3VudBgBIAEoCRIOCgZyZXN1bHQY",
-          "AiABKAUiIQoOTG9hZEdhbWVDMlNNc2cSDwoHYWNjb3VudBgBIAEoCWIGcHJv",
-          "dG8z"));
+          "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASKiAQoPR2FtZVNhdmVE",
+          "YXRhTXNnEg8KB2FjY291bnQYASABKAkSOAoMZ2FtZXNhdmVHYW1lGAIgAygL",
+          "MiIuR2FtZVNhdmVEYXRhTXNnLkdhbWVzYXZlR2FtZUVudHJ5GkQKEUdhbWVz",
+          "YXZlR2FtZUVudHJ5EgsKA2tleRgBIAEoCRIeCgV2YWx1ZRgCIAEoCzIPLlNh",
+          "dmVHYW1lQzJTTXNnOgI4ASIxCg5TYXZlR2FtZVMyQ01zZxIPCgdhY2NvdW50",
+          "GAEgASgJEg4KBnJlc3VsdBgCIAEoBSIhCg5Mb2FkR2FtZUMyU01zZxIPCgdh",
+          "Y2NvdW50GAEgASgJIrABCg5Mb2FkR2FtZVMyQ01zZxIPCgdhY2NvdW50GAEg",
+          "ASgJEg4KBnJlc3VsdBgCIAEoBRI3CgxnYW1lc2F2ZUdhbWUYAyADKAsyIS5M",
+          "b2FkR2FtZVMyQ01zZy5HYW1lc2F2ZUdhbWVFbnRyeRpEChFHYW1lc2F2ZUdh",
+          "bWVFbnRyeRILCgNrZXkYASABKAkSHgoFdmFsdWUYAiABKAsyDy5TYXZlR2Ft",
+          "ZUMyU01zZzoCOAFiBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -81,9 +85,10 @@ public static partial class PlayerMessageReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::ListSceneFurnitureMsg), global::ListSceneFurnitureMsg.Parser, new[]{ "SceneFurnitures" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ListInventoryItemMsg), global::ListInventoryItemMsg.Parser, new[]{ "InventoryItems" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::SaveGameC2SMsg), global::SaveGameC2SMsg.Parser, new[]{ "DataSceneName", "CharacterPos", "SceneItems", "SceneFurnitures", "TileDetails", "FristLogin", "InventoryItems", "TiemDic", "Money", "AnimState" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, null, null, null, }),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GameSaveDataMsg), global::GameSaveDataMsg.Parser, new[]{ "GamesaveGame" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+          new pbr::GeneratedClrTypeInfo(typeof(global::GameSaveDataMsg), global::GameSaveDataMsg.Parser, new[]{ "Account", "GamesaveGame" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
           new pbr::GeneratedClrTypeInfo(typeof(global::SaveGameS2CMsg), global::SaveGameS2CMsg.Parser, new[]{ "Account", "Result" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::LoadGameC2SMsg), global::LoadGameC2SMsg.Parser, new[]{ "Account" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::LoadGameC2SMsg), global::LoadGameC2SMsg.Parser, new[]{ "Account" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::LoadGameS2CMsg), global::LoadGameS2CMsg.Parser, new[]{ "Account", "Result", "GamesaveGame" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
         }));
   }
   #endregion
@@ -2801,21 +2806,21 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
 
   /// <summary>Field number for the "tiemDic" field.</summary>
   public const int TiemDicFieldNumber = 8;
-  private static readonly pbc::MapField<string, long>.Codec _map_tiemDic_codec
-      = new pbc::MapField<string, long>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt64(16, 0L), 66);
-  private readonly pbc::MapField<string, long> tiemDic_ = new pbc::MapField<string, long>();
+  private static readonly pbc::MapField<string, int>.Codec _map_tiemDic_codec
+      = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 66);
+  private readonly pbc::MapField<string, int> tiemDic_ = new pbc::MapField<string, int>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public pbc::MapField<string, long> TiemDic {
+  public pbc::MapField<string, int> TiemDic {
     get { return tiemDic_; }
   }
 
   /// <summary>Field number for the "money" field.</summary>
   public const int MoneyFieldNumber = 9;
-  private long money_;
+  private int money_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public long Money {
+  public int Money {
     get { return money_; }
     set {
       money_ = value;
@@ -2874,7 +2879,7 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     hash ^= FristLogin.GetHashCode();
     hash ^= InventoryItems.GetHashCode();
     hash ^= TiemDic.GetHashCode();
-    if (Money != 0L) hash ^= Money.GetHashCode();
+    if (Money != 0) hash ^= Money.GetHashCode();
     if (AnimState != 0) hash ^= AnimState.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -2905,9 +2910,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     fristLogin_.WriteTo(output, _map_fristLogin_codec);
     inventoryItems_.WriteTo(output, _map_inventoryItems_codec);
     tiemDic_.WriteTo(output, _map_tiemDic_codec);
-    if (Money != 0L) {
+    if (Money != 0) {
       output.WriteRawTag(72);
-      output.WriteInt64(Money);
+      output.WriteInt32(Money);
     }
     if (AnimState != 0) {
       output.WriteRawTag(80);
@@ -2934,9 +2939,9 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     fristLogin_.WriteTo(ref output, _map_fristLogin_codec);
     inventoryItems_.WriteTo(ref output, _map_inventoryItems_codec);
     tiemDic_.WriteTo(ref output, _map_tiemDic_codec);
-    if (Money != 0L) {
+    if (Money != 0) {
       output.WriteRawTag(72);
-      output.WriteInt64(Money);
+      output.WriteInt32(Money);
     }
     if (AnimState != 0) {
       output.WriteRawTag(80);
@@ -2962,8 +2967,8 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     size += fristLogin_.CalculateSize(_map_fristLogin_codec);
     size += inventoryItems_.CalculateSize(_map_inventoryItems_codec);
     size += tiemDic_.CalculateSize(_map_tiemDic_codec);
-    if (Money != 0L) {
-      size += 1 + pb::CodedOutputStream.ComputeInt64Size(Money);
+    if (Money != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Money);
     }
     if (AnimState != 0) {
       size += 1 + pb::CodedOutputStream.ComputeInt32Size(AnimState);
@@ -2990,7 +2995,7 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
     fristLogin_.MergeFrom(other.fristLogin_);
     inventoryItems_.MergeFrom(other.inventoryItems_);
     tiemDic_.MergeFrom(other.tiemDic_);
-    if (other.Money != 0L) {
+    if (other.Money != 0) {
       Money = other.Money;
     }
     if (other.AnimState != 0) {
@@ -3044,7 +3049,7 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
           break;
         }
         case 72: {
-          Money = input.ReadInt64();
+          Money = input.ReadInt32();
           break;
         }
         case 80: {
@@ -3099,7 +3104,7 @@ public sealed partial class SaveGameC2SMsg : pb::IMessage<SaveGameC2SMsg>
           break;
         }
         case 72: {
-          Money = input.ReadInt64();
+          Money = input.ReadInt32();
           break;
         }
         case 80: {
@@ -3147,6 +3152,7 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public GameSaveDataMsg(GameSaveDataMsg other) : this() {
+    account_ = other.account_;
     gamesaveGame_ = other.gamesaveGame_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -3157,10 +3163,22 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
     return new GameSaveDataMsg(this);
   }
 
+  /// <summary>Field number for the "account" field.</summary>
+  public const int AccountFieldNumber = 1;
+  private string account_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string Account {
+    get { return account_; }
+    set {
+      account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
   /// <summary>Field number for the "gamesaveGame" field.</summary>
-  public const int GamesaveGameFieldNumber = 1;
+  public const int GamesaveGameFieldNumber = 2;
   private static readonly pbc::MapField<string, global::SaveGameC2SMsg>.Codec _map_gamesaveGame_codec
-      = new pbc::MapField<string, global::SaveGameC2SMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::SaveGameC2SMsg.Parser), 10);
+      = new pbc::MapField<string, global::SaveGameC2SMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::SaveGameC2SMsg.Parser), 18);
   private readonly pbc::MapField<string, global::SaveGameC2SMsg> gamesaveGame_ = new pbc::MapField<string, global::SaveGameC2SMsg>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3183,6 +3201,7 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
     if (ReferenceEquals(other, this)) {
       return true;
     }
+    if (Account != other.Account) return false;
     if (!GamesaveGame.Equals(other.GamesaveGame)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -3191,6 +3210,7 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
+    if (Account.Length != 0) hash ^= Account.GetHashCode();
     hash ^= GamesaveGame.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -3210,6 +3230,10 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
+    if (Account.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Account);
+    }
     gamesaveGame_.WriteTo(output, _map_gamesaveGame_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -3221,6 +3245,10 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Account.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Account);
+    }
     gamesaveGame_.WriteTo(ref output, _map_gamesaveGame_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -3232,6 +3260,9 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
+    if (Account.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
+    }
     size += gamesaveGame_.CalculateSize(_map_gamesaveGame_codec);
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -3244,6 +3275,9 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
   public void MergeFrom(GameSaveDataMsg other) {
     if (other == null) {
       return;
+    }
+    if (other.Account.Length != 0) {
+      Account = other.Account;
     }
     gamesaveGame_.MergeFrom(other.gamesaveGame_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3262,6 +3296,10 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 10: {
+          Account = input.ReadString();
+          break;
+        }
+        case 18: {
           gamesaveGame_.AddEntriesFrom(input, _map_gamesaveGame_codec);
           break;
         }
@@ -3281,6 +3319,10 @@ public sealed partial class GameSaveDataMsg : pb::IMessage<GameSaveDataMsg>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 10: {
+          Account = input.ReadString();
+          break;
+        }
+        case 18: {
           gamesaveGame_.AddEntriesFrom(ref input, _map_gamesaveGame_codec);
           break;
         }
@@ -3697,6 +3739,258 @@ public sealed partial class LoadGameC2SMsg : pb::IMessage<LoadGameC2SMsg>
           break;
         case 10: {
           Account = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
+public sealed partial class LoadGameS2CMsg : pb::IMessage<LoadGameS2CMsg>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<LoadGameS2CMsg> _parser = new pb::MessageParser<LoadGameS2CMsg>(() => new LoadGameS2CMsg());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pb::MessageParser<LoadGameS2CMsg> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::PlayerMessageReflection.Descriptor.MessageTypes[14]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public LoadGameS2CMsg() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public LoadGameS2CMsg(LoadGameS2CMsg other) : this() {
+    account_ = other.account_;
+    result_ = other.result_;
+    gamesaveGame_ = other.gamesaveGame_.Clone();
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public LoadGameS2CMsg Clone() {
+    return new LoadGameS2CMsg(this);
+  }
+
+  /// <summary>Field number for the "account" field.</summary>
+  public const int AccountFieldNumber = 1;
+  private string account_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string Account {
+    get { return account_; }
+    set {
+      account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "result" field.</summary>
+  public const int ResultFieldNumber = 2;
+  private int result_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int Result {
+    get { return result_; }
+    set {
+      result_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "gamesaveGame" field.</summary>
+  public const int GamesaveGameFieldNumber = 3;
+  private static readonly pbc::MapField<string, global::SaveGameC2SMsg>.Codec _map_gamesaveGame_codec
+      = new pbc::MapField<string, global::SaveGameC2SMsg>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::SaveGameC2SMsg.Parser), 26);
+  private readonly pbc::MapField<string, global::SaveGameC2SMsg> gamesaveGame_ = new pbc::MapField<string, global::SaveGameC2SMsg>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::MapField<string, global::SaveGameC2SMsg> GamesaveGame {
+    get { return gamesaveGame_; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as LoadGameS2CMsg);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(LoadGameS2CMsg other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Account != other.Account) return false;
+    if (Result != other.Result) return false;
+    if (!GamesaveGame.Equals(other.GamesaveGame)) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Account.Length != 0) hash ^= Account.GetHashCode();
+    if (Result != 0) hash ^= Result.GetHashCode();
+    hash ^= GamesaveGame.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Account.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Account);
+    }
+    if (Result != 0) {
+      output.WriteRawTag(16);
+      output.WriteInt32(Result);
+    }
+    gamesaveGame_.WriteTo(output, _map_gamesaveGame_codec);
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Account.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Account);
+    }
+    if (Result != 0) {
+      output.WriteRawTag(16);
+      output.WriteInt32(Result);
+    }
+    gamesaveGame_.WriteTo(ref output, _map_gamesaveGame_codec);
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    if (Account.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
+    }
+    if (Result != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Result);
+    }
+    size += gamesaveGame_.CalculateSize(_map_gamesaveGame_codec);
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(LoadGameS2CMsg other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Account.Length != 0) {
+      Account = other.Account;
+    }
+    if (other.Result != 0) {
+      Result = other.Result;
+    }
+    gamesaveGame_.MergeFrom(other.gamesaveGame_);
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          Account = input.ReadString();
+          break;
+        }
+        case 16: {
+          Result = input.ReadInt32();
+          break;
+        }
+        case 26: {
+          gamesaveGame_.AddEntriesFrom(input, _map_gamesaveGame_codec);
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          Account = input.ReadString();
+          break;
+        }
+        case 16: {
+          Result = input.ReadInt32();
+          break;
+        }
+        case 26: {
+          gamesaveGame_.AddEntriesFrom(ref input, _map_gamesaveGame_codec);
           break;
         }
       }

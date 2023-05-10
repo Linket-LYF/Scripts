@@ -294,30 +294,45 @@ namespace MyFarm.Inventory
 
         }
 
-        public SaveData SaveGame()
+        public SaveGameC2SMsg SaveGame()
         {
-            SaveData saveData = new SaveData();
-            saveData.playerMoney = playerMoney;
-            saveData.inventoryDic = new Dictionary<string, List<InventoryItem>>();
-            saveData.inventoryDic.Add(playerBag.name, playerBag.itemBagList);
+            SaveGameC2SMsg saveData = new();
+            saveData.Money = playerMoney;
+            ListInventoryItemMsg listInventoryItemMsg = new ListInventoryItemMsg();
+            foreach (var inventoryItem in playerBag.itemBagList)
+            {
+                listInventoryItemMsg.InventoryItems.Add(InventoryItem.InventoryItem2InventoryItemMsg(inventoryItem));
+            }
+            saveData.InventoryItems.Add(playerBag.name, listInventoryItemMsg);
             foreach (var item in boxItemDic)
             {
-                saveData.inventoryDic.Add(item.Key, item.Value);
+                ListInventoryItemMsg listMsg = new();
+                foreach (var inventoryItem in item.Value)
+                {
+                    listMsg.InventoryItems.Add(InventoryItem.InventoryItem2InventoryItemMsg(inventoryItem));
+                }
+                saveData.InventoryItems.Add(item.Key, listMsg);
             }
             return saveData;
         }
 
-        public void LoadGame(SaveData saveData)
+        public void LoadGame(SaveGameC2SMsg saveData)
         {
             //money
-            this.playerMoney = saveData.playerMoney;
+            this.playerMoney = saveData.Money;
             playerBag = Instantiate(playerBagTemp);
-            playerBag.itemBagList = saveData.inventoryDic[playerBag.name];
-            foreach (var item in saveData.inventoryDic)
+            foreach (var inventoryItem in saveData.InventoryItems[playerBag.name].InventoryItems)
+            {
+                playerBag.itemBagList.Add(InventoryItem.InventoryItemMsg2InventoryItem(inventoryItem));
+            }
+            foreach (var item in saveData.InventoryItems)
             {
                 if (boxItemDic.ContainsKey(item.Key))
                 {
-                    boxItemDic[item.Key] = item.Value;
+                    foreach (var inventoryItem in item.Value.InventoryItems)
+                    {
+                        boxItemDic[item.Key].Add(InventoryItem.InventoryItemMsg2InventoryItem(inventoryItem));
+                    }
                 }
             }
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);

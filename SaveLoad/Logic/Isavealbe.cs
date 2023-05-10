@@ -11,7 +11,7 @@ namespace MyFarm.Save
         {
             SaveLoadManager.Instance.RegisterSavable(this);
         }
-        SaveData SaveGame();
-        void LoadGame(SaveData saveData);
+        SaveGameC2SMsg SaveGame();
+        void LoadGame(SaveGameC2SMsg saveData);
     }
 }

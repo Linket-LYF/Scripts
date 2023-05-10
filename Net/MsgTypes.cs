@@ -35,6 +35,8 @@ internal class MsgTypes
         {UseItem, ItemHandle.Instance.UseItem},
         {PickItem, ItemHandle.Instance.PickItem},
         {DropItem, ItemHandle.Instance.DropItem},
+        {LoadRequest, SaveHandle.Instance.LoadRequest},
+        {SaveRequest, SaveHandle.Instance.SaveRequest},
     };
     public static Dictionary<int, Action<byte[]>> msgS2CHandles = new Dictionary<int, Action<byte[]>>
     {
@@ -49,6 +51,9 @@ internal class MsgTypes
         // {PlayerLeave, PlayerHandle.Instance.PlayerLeave},
         {UseItem, ItemHandle.Instance.UseItem},
         {PickItem, ItemHandle.Instance.PickItem},
+        {DropItem, ItemHandle.Instance.DropItem},
+        {LoadRequest, SaveHandle.Instance.LoadRequest},
+        {SaveRequest, SaveHandle.Instance.SaveRequest},
     };
 }
 

@@ -63,13 +63,14 @@ message SaveGameC2SMsg{
 	map<string,TileDetailsMsg> tileDetails=5;
 	map<string,bool> fristLogin=6;
 	map<string,ListInventoryItemMsg> inventoryItems=7;
-	map<string,int64> tiemDic=8;
-	int64 money=9;
+	map<string,int32> tiemDic=8;
+	int32 money=9;
 	int32 animState=10;
 	
 }
 message GameSaveDataMsg{
-	map<string,SaveGameC2SMsg> gamesaveGame=1;
+	string account=1;
+	map<string,SaveGameC2SMsg> gamesaveGame=2;
 }
 message SaveGameS2CMsg{
 	string account=1;
@@ -77,6 +78,12 @@ message SaveGameS2CMsg{
 }
 message LoadGameC2SMsg{
 	string account=1;
+}
+message LoadGameS2CMsg
+{
+	string account=1;
+	int32 result=2;
+	map<string,SaveGameC2SMsg> gamesaveGame=3;
 }
 
 

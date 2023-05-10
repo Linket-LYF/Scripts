@@ -8,7 +8,6 @@ public class SaveButton : MonoBehaviour
     public Text text;
     private Button curBnt;
     private int index => transform.GetSiblingIndex();
-    private SaveData curData;
     /// <summary>
     /// This function is called when the object becomes enabled and active.
     /// </summary>
@@ -34,14 +33,14 @@ public class SaveButton : MonoBehaviour
     // }
     private void LoadGame()
     {
-        if (curData != null)
-        {
-            SaveLoadManager.Instance.Load();
-
-        }
-        else
-        {
-            EventHandler.CallStartNewGame();
-        }
+        // if (curData != null)
+        // {
+        //     SaveLoadManager.Instance.Load();
+        // }
+        // else
+        // {
+        //     EventHandler.CallStartNewGame();
+        //     //SaveLoadManager.Instance.Load();
+        // }
     }
 }

@@ -37,7 +37,7 @@ public class Player : MonoBehaviour, Isavealbe
     /// </summary>
     private void Start()
     {
-        GameManager.Instance.Player = this;
+        GameManager.Instance.player = this;
         Isavealbe saveable = this;
         saveable.RegisterSaveble();
     }
@@ -333,17 +333,17 @@ public class Player : MonoBehaviour, Isavealbe
         }
     }
 
-    public SaveData SaveGame()
+    public SaveGameC2SMsg SaveGame()
     {
-        SaveData saveData = new SaveData();
-        saveData.characterPos = new Dictionary<string, SerializableVector3>();
-        saveData.characterPos.Add(this.name, new SerializableVector3(transform.position));
+        SaveGameC2SMsg saveData = new();
+        saveData.CharacterPos.Add(this.name, new Vector3Msg { X = transform.position.x, Y = transform.position.y, Z = transform.position.z });
         return saveData;
     }
 
-    public void LoadGame(SaveData saveData)
+    public void LoadGame(SaveGameC2SMsg saveData)
     {
-        var charaPos = saveData.characterPos[this.name].ToVertor3();
+        var vector3Msg = saveData.CharacterPos[this.name];
+        var charaPos = new Vector3(vector3Msg.X, vector3Msg.Y, vector3Msg.Z);
         Debug.Log(playerId);
         Debug.Log(playerIdtext.text);
         playerIdtext.text = playerId;

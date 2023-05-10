@@ -124,17 +124,17 @@ namespace MyFarm.Transition
             yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             yield return Fade(0f);
         }
-        public SaveData SaveGame()
+        public SaveGameC2SMsg SaveGame()
         {
-            SaveData saveData = new SaveData();
-            saveData.dataSceneName = SceneManager.GetActiveScene().name;
+            SaveGameC2SMsg saveData = new();
+            saveData.DataSceneName = SceneManager.GetActiveScene().name;
             return saveData;
         }
 
-        public void LoadGame(SaveData saveData)
+        public void LoadGame(SaveGameC2SMsg saveData)
         {
             //加载游戏进度场景
-            StartCoroutine(LoadSaveDataScene(saveData.dataSceneName));
+            StartCoroutine(LoadSaveDataScene(saveData.DataSceneName));
         }
     }
 }
