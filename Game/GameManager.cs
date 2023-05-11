@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager>
     }
     private void OnDisable()
     {
-        EventHandle.CollectMapInfo -= OnCollectMapInfo;
+        EventHandler.CollectMapInfo -= OnCollectMapInfo;
     }
     private void OnCollectMapInfo()
     {

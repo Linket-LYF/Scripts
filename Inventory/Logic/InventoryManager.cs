@@ -40,16 +40,6 @@ namespace MyFarm.Inventory
             playerBag = Instantiate(playerBagTemp);
             playerMoney = 100;
             boxItemDic.Clear();
-            //收集地图上的所有BoxItem类并添加进boxItemDic
-            var boxItems = FindObjectsOfType<BoxItem>();
-            foreach (var item in boxItems)
-            {
-                if (!boxItemDic.ContainsKey(item.boxName))
-                {
-                    boxItemDic.Add(item.boxName, new List<InventoryItem>());
-                }
-                boxItemDic[item.boxName].Add(item.inventoryItem);
-            }
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemBagList);
         }
 
