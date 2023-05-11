@@ -112,6 +112,7 @@ namespace MyFarm.Transition
             }
             yield return LoadSceneSetActive(sceneName);
             currentSceneName = sceneName;
+            EventHandler.CallCollectMapInfo();
             EventHandler.CallAfterLoadSceneEvent();
             yield return Fade(0f);
             //将新的存档发送给服务器

@@ -192,4 +192,10 @@ public static class EventHandler
     {
         OtherPlayerLeave?.Invoke(name);
     }
+    //收集地图上初始化的信息用
+    public static event Action CollectMapInfo;
+    public static void CallCollectMapInfo()
+    {
+        CollectMapInfo?.Invoke();
+    }
 }

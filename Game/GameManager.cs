@@ -10,7 +10,22 @@ public class GameManager : Singleton<GameManager>
     public Dictionary<string, bool> playerReady = new();
     public List<Item> sceneItems = new();
     public List<SceneFurniture> sceneFurnitures = new();
-
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+    private void OnEnable()
+    {
+        EventHandler.CollectMapInfo += OnCollectMapInfo;
+    }
+    private void OnDisable()
+    {
+        EventHandle.CollectMapInfo -= OnCollectMapInfo;
+    }
+    private void OnCollectMapInfo()
+    {
+        //将地图上一些物品进行初始化
+    }
     public Dictionary<string, OtherPlayer> OtherPlayers
     {
         get => otherPlayers;
