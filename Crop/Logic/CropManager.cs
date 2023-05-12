@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MyFarm.Save;
 namespace MyFarm.CropPlant
 {
     public class CropManager : Singleton<CropManager>

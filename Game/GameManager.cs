@@ -25,6 +25,22 @@ public class GameManager : Singleton<GameManager>
     private void OnCollectMapInfo()
     {
         //将地图上一些物品进行初始化
+        //获取当前场景
+        string currentScene = SceneManager.GetActiveScene().name;
+        //从当前场景查到带有EmtryBox组件的所有对象
+        EmptyBox[] emptyBoxes = FindObjectsOfType<EmptyBox>();
+        //遍历所有对象
+        foreach (var item in emptyBoxes)
+        {
+            //如果对象的名字包含当前场景名字
+            if (item.name.Contains(currentScene))
+            {
+                //获取对象的ID
+                int id = InventoryManager.Instance.dicCnt;
+                //初始化对象
+                item.InitBox(id);
+            }
+        }
     }
     public Dictionary<string, OtherPlayer> OtherPlayers
     {
